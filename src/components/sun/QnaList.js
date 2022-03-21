@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import QnaListItem from './QnaListItem';
+import './Qna.css';
 
 function QnaList(props) {
     // state
-    const [data, setData] = useState('');
+    // useState([]) 임!! 배열에 담음!! 주의...
+    const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);
 
     // 서버에 요청해서 데이터 받아옴
@@ -13,7 +15,8 @@ function QnaList(props) {
         setLoading(true);
         const response = await axios.get('http://localhost:8080/qnalist');
         console.log(response.data);
-        setData(response.data);
+        console.log(response.data.qnaList);
+        setData(response.data.qnaList);
         setLoading(false);
     }
 
@@ -25,7 +28,7 @@ function QnaList(props) {
 
     return (
         <div>
-            <h3>QnA게시판입니다</h3>
+            <h3>상품 정보 조회</h3>
             <table border="1">
                 <thead>
                     <tr>
@@ -36,17 +39,9 @@ function QnaList(props) {
                     </tr>
                 </thead>
                 <tbody>
-                    {/* Array.from(datas).map(data => (...)); */}
-                    
-                    {/* {
-                        data.map(function (qnaList, i) {
-                            return <QnaListItem qnaList={qnaList} key={i} />
-                        })
-                    } */}
-
                     {
-                        Array.from(data).map(function (qnaList, i) {
-                            return <QnaListItem qnaList={qnaList} key={i} />
+                        data.map(function (qna, i) {
+                            return <QnaListItem qna={qna} key={i} />
                         })
                     }
                 </tbody>

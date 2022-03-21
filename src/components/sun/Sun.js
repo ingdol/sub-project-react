@@ -23,7 +23,7 @@ function Sun(props) {
       }, []);
     return (
         <div>
-            <h3>sun컨트롤러 / 서버로부터 받아온 값</h3>
+            <h3>홈 : sun컨트롤러 / 서버로부터 받아온 값</h3>
             {data}
         </div>
     );
