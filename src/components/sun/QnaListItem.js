@@ -1,16 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function QnaListItem({qnaList}) {
+function QnaListItem(props) {
     return (
-        <div>
             <tr>
-                <td><Link to={"/qnaDetailView/" + qnaList.hostqnaNo}>{qnaList.hostqnaNo}</Link></td>
-                <td>{qnaList.memNick}</td>
-                <td>{qnaList.hostqnaTitle}</td>
-                <td>{qnaList.hostqnaDate}</td>
+                <td>{props.qna.hostqnaNo}</td>
+                <td>{props.qna.memNick}</td>
+                <td><Link to={"/qnadetailview/" + props.qna.hostqnaNo}>{props.qna.hostqnaTitle}</Link></td>
+                <td>{props.qna.hostqnaDate}</td>
             </tr>
-        </div>
     );
 }
 

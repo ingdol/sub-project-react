@@ -1,6 +1,6 @@
 import './App.css';
 import AxiosSpring from './components/AxiosSpring';
-import QnaList from './components/sun/QnaList';
+import QnaTop from './components/sun/QnaTop';
 import Sun from './components/sun/Sun';
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
       <hr/>
       <Sun></Sun>
       <hr/>
-      <QnaList></QnaList>
+      <QnaTop></QnaTop>
     </div>
   );
 }
