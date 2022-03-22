@@ -1,0 +1,14 @@
+.background {
+    background-image: url('./background.jpg');
+    background-size: cover;
+    color: white;
+    height: 500px;
+    padding-top: 200px;
+}
+
+.background P {
+    font-size: 50px;
+    line-height: 0.4;
+    text-align: left;
+    padding-left: 400px;
+}
