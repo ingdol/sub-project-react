@@ -12,12 +12,8 @@ function App() {
   return (
     <div className="App">
       <Intro></Intro>
-      <AxiosSpring></AxiosSpring>
-      <hr/>
-      <Sun></Sun>
-      <hr/>
+      {/* <AxiosSpring></AxiosSpring> */}
       <QnaTop></QnaTop>
-      <QnaList></QnaList>
       <hr />
       <Link to="/SpaceClassList">[공간&클래스 조회] </Link>
       <Routes>
