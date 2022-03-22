@@ -1,14 +1,62 @@
 .background {
     background-image: url('./background.jpg');
     background-size: cover;
-    color: white;
-    height: 500px;
-    padding-top: 200px;
+    height: 400px;
+    padding-top: 150px;
 }
 
 .background P {
-    font-size: 50px;
+    color: #fff;
+    font-size: 300%;
+    font-weight: 600;
     line-height: 0.4;
     text-align: left;
-    padding-left: 400px;
+    padding-left: 20%;
 }
+
+.hostInfo {
+    padding-top: 3%;
+}
+.hostText {
+    display: flex;
+    padding: 0 20%;
+}
+
+.hostItem {
+    padding: 7%;
+    text-align: left;
+}
+
+
+.loading span {
+    display: inline-block;
+    margin: 0 -.05em;
+    animation: loading 15.0s infinite;
+  }
+  .loading span:nth-child(1) {
+    opacity: 0;
+    animation-delay: 0.0s;
+  }
+  .loading span:nth-child(2) {
+    opacity: 0;
+    animation-delay: 5.0s;
+  }
+  .loading span:nth-child(3) {
+    opacity: 0;
+    animation-delay: 10.0s;
+  }
+  @keyframes loading {
+    0%, 100% {
+        opacity: 0;
+        transform: none;
+    }
+    15% {
+        opacity: 1;
+        transform: translateY(-20px);
+    }
+    
+    30% {
+        opacity: 0;
+        transform: none;
+    }
+  }
