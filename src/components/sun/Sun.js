@@ -21,6 +21,8 @@ function Sun(props) {
       useEffect(() => {
           loadData();
       }, []);
+
+      //수정?
     return (
         <div>
             <h3>홈 : sun컨트롤러 / 서버로부터 받아온 값</h3>
