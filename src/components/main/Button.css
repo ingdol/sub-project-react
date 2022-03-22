@@ -13,7 +13,7 @@ white-space: nowrap;
 
 .btn--primary {
 background-color: var(--primary);
-color: #242424;
+color: #fff;
 border: 1px solid var(--primary);
 }
 
@@ -33,6 +33,7 @@ font-size: 18px;
 .btn--large {
 padding: 12px 26px;
 font-size: 20px;
+font-weight: 550;
 }
 
 .btn--mobile {
@@ -53,12 +54,18 @@ padding: 12px 64px;
 font-size: 20px;
 }
 
-.btn--large:hover,
 .btn--medium:hover,
 .btn--mobile:hover {
 transition: all 0.3s ease-out;
 background: #40A6FB;
 color: #fff;
+}
+
+.btn--large:hover {
+transition: all 0.3s ease-out;
+background: #0079db;
+color: #fff;
+border: 1px solid #0079db;
 }
 
 .btn--wide:hover {
