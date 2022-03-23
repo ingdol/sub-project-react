@@ -28,7 +28,8 @@ ul{
     cursor: pointer;
     font-size: large;
     font-weight: bolder;
-    background-color: hsl(184, 100%, 89%);
+    background-color: #40A6FB;;
+    opacity: 0.8;
 }
 
 
@@ -75,7 +76,7 @@ ul{
 
 .bt_wrap button:hover {
     font-weight: bolder;
-    background-color: hsl(184, 100%, 89%);
+    background-color:#40A6FB;;
     cursor: pointer;
 }
 
@@ -321,6 +322,6 @@ ul{
 
 .bt_wrap input:hover {
     font-weight: bolder;
-    background-color: hsl(184, 100%, 89%);
+    background-color: #40A6FB;;
     cursor: pointer;
 }

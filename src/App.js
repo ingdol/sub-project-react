@@ -18,7 +18,6 @@ function App() {
       </div>
       <Main></Main>
       <Intro></Intro>
-      {/* <AxiosSpring></AxiosSpring> */}
       <QnaTop></QnaTop>
       <hr />
       <Link to="/SpaceClassList">[공간&클래스 조회] </Link>
