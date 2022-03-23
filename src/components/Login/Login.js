@@ -44,8 +44,8 @@ function Login(props) {
                     onChange={onChange} />
                 <input
                     type="text"
-                    name="memPwd"
-                    value={mem.memPwd}
+                    name="memPw"
+                    value={mem.memPw}
                     onChange={onChange} />
                 <input type="submit" value="등록" />
             </form>
