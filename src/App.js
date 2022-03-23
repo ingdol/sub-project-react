@@ -12,6 +12,7 @@ import QnaUpdate from './components/sun/QnaUpdate';
 import SpaceClassList from './components/bch/SpaceClassList';
 import CreateClass from './components/Create/CreateClass';
 import CreateClass2 from './components/Create/CreateClass2';
+import Login from './components/Login/Login';
 
 function App() {
   return (
@@ -19,9 +20,9 @@ function App() {
       <div className="Nav">
         <Navbar />
       </div>
-      
       <Routes>
         <Route path="/" element={<Main />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/QnaTop" element={<QnaTop />} />
         <Route path="/Intro" element={<Intro />} />
         <Route path="/SpaceClassList" element={<SpaceClassList/>} />
