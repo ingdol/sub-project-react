@@ -330,3 +330,9 @@ ul{
     background-color: #40A6FB;;
     cursor: pointer;
 }
+.board_write .info .dnone{
+    display: none;
+}
+.dnone{
+    display: none;
+}

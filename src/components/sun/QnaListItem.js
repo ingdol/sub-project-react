@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 function QnaListItem(props) {
     return (
         <div>
-            <div class="num">{props.qna.hostqnaNo}</div>
-            <div class="title"><Link to={"/qnadetailview/" + props.qna.hostqnaNo}>{props.qna.hostqnaTitle}</Link></div>
-            <div class="writer">{props.qna.memNick}</div>
-            <div class="date">{props.qna.hostqnaDate.split('T')[0]}</div>
+            <div className="num">{props.qna.hostqnaNo}</div>
+            <div className="title"><Link to={"/qnadetailview/" + props.qna.hostqnaNo}>{props.qna.hostqnaTitle}</Link></div>
+            <div className="writer">{props.qna.memNick}</div>
+            <div className="date">{props.qna.hostqnaDate.split('T')[0]}</div>
         </div>  
     );
 }

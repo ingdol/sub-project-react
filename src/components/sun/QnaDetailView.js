@@ -73,16 +73,16 @@ function QnaDetailView(props) {
      return (
         <div>
 
-            <section class="board_wrap">
-                <div class="board_title">
+            <section className="board_wrap">
+                <div className="board_title">
                     <strong>QnA 상세게시판</strong>
                 </div>
-                <div class="board_view_wrap">
-                    <div class="board_view">
-                        <div class="title">
+                <div className="board_view_wrap">
+                    <div className="board_view">
+                        <div className="title">
                             제목 : {qna.hostqnaTitle}
                         </div>
-                        <div class="info">
+                        <div className="info">
                             <dl>
                                 <dt>번호</dt>
                                 <dd>{qna.hostqnaNo}</dd>
@@ -96,13 +96,13 @@ function QnaDetailView(props) {
                                 <dd>{qna.hostqnaDate}</dd>
                             </dl>                            
                         </div>
-                        <div class="cont">
+                        <div className="cont">
                             <br/><br/>
                             {qna.hostqnaInfo}
                             <br/><br/><br/>
                         </div>
                     </div>
-                    <div class="bt_wrap">
+                    <div className="bt_wrap">
                         <button onClick={onUpdateItem}>수정</button>
                         <button onClick={onDeleteItem}>삭제</button>
                     </div>
