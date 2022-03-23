@@ -28,24 +28,28 @@ function QnaList(props) {
 
     return (
         <div>
-            <h3>QnA 게시판</h3>
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th>글번호</th>
-                        <th>글쓴이</th>
-                        <th>제목</th>
-                        <th>날짜</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        data.map(function (qna, i) {
-                            return <QnaListItem qna={qna} key={i} />
-                        })
-                    }
-                </tbody>
-            </table>
+
+            <div class="board_wrap">
+                <div class="board_title">
+                    <strong>QnA 게시판</strong>
+                </div>
+                <div class="board_list_wrap">
+                    <div class="board_list">
+                        <div class="top">
+                            <div class="num">번호</div>
+                            <div class="title">제목</div>
+                            <div class="writer">글쓴이</div>
+                            <div class="date">작성일</div>
+                        </div>
+                            {
+                                data.map(function (qna, i) {
+                                    return <QnaListItem qna={qna} key={i} />
+                                })
+                            }            
+                    </div>
+                </div>
+            </div>
+
         </div>
     );
 }

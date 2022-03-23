@@ -71,20 +71,45 @@ function QnaDetailView(props) {
  
  
      return (
-         <div>
-             <h3>QnA 상세게시판</h3> 
-             <div>
-                {/* <h6>{qna.hostqnaNo}</h6> */}
-                <h5>제목 : {qna.hostqnaTitle}</h5>
-                <h6>닉네임 : {qna.memNick}</h6>
-                <h6>{qna.hostqnaInfo}</h6>
-                <h6>{qna.hostqnaFaq}</h6>
-                <h6>{qna.hostqnaDate}</h6>
-                <h6>{qna.hostqnaCom}</h6>
-                <button onClick={onUpdateItem}>수정</button>
-                <button onClick={onDeleteItem}>삭제</button>
-             </div>
-         </div>
+        <div>
+
+            <section class="board_wrap">
+                <div class="board_title">
+                    <strong>QnA 상세게시판</strong>
+                </div>
+                <div class="board_view_wrap">
+                    <div class="board_view">
+                        <div class="title">
+                            제목 : {qna.hostqnaTitle}
+                        </div>
+                        <div class="info">
+                            <dl>
+                                <dt>번호</dt>
+                                <dd>{qna.hostqnaNo}</dd>
+                            </dl>
+                            <dl>
+                                <dt>글쓴이</dt>
+                                <dd>{qna.memNick}</dd>
+                            </dl>
+                            <dl>
+                                <dt>작성일</dt>
+                                <dd>{qna.hostqnaDate}</dd>
+                            </dl>                            
+                        </div>
+                        <div class="cont">
+                            <br/><br/>
+                            {qna.hostqnaInfo}
+                            <br/><br/><br/>
+                        </div>
+                    </div>
+                    <div class="bt_wrap">
+                        <button onClick={onUpdateItem}>수정</button>
+                        <button onClick={onDeleteItem}>삭제</button>
+                    </div>
+                </div>
+            </section>
+
+        </div>
      );
 }
 
