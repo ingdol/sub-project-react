@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import './Login.css';
 
 function Login(props) {
     let history = useNavigate();
@@ -35,19 +36,29 @@ function Login(props) {
     }
 
     return (
-        <div>
+        <div className='LoginBox'>
+            <div className='LoginTitle'>
+                로그인
+            </div>
+            <div>
+                환영합니다.
+                로그인을 해주세요!
+            </div>
             <form name="loginForm" onSubmit={onSubmit} >
-                <input
+                <div><input className='inputIDPW'
                     type="text"
                     name="memId"
+                    placeholder="아이디(이메일)"
                     value={mem.memId}
                     onChange={onChange} />
-                <input
+                <div><input className='inputIDPW'
                     type="text"
                     name="memPwd"
+                    placeholder="비밀번호"
                     value={mem.memPwd}
-                    onChange={onChange} />
-                <input type="submit" value="등록" />
+                    onChange={onChange} /></div>
+                <div></div><button className='btn--large'><input className='nonStyle' type="submit" value="LOGIN" /></button>
+                </div>
             </form>
         </div>
     );
