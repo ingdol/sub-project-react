@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Class.css';
 function CreateClass(props) {
 
-    const [disable, setDisable] = React.useState(false);
+    // const [disable, setDisable] = React.useState(false);
 
     return (
         <div>
