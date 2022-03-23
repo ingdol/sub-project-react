@@ -7,7 +7,7 @@ function QnaListItem(props) {
                 <td>{props.qna.hostqnaNo}</td>
                 <td>{props.qna.memNick}</td>
                 <td><Link to={"/qnadetailview/" + props.qna.hostqnaNo}>{props.qna.hostqnaTitle}</Link></td>
-                <td>{props.qna.hostqnaDate}</td>
+                <td>{props.qna.hostqnaDate.split('T')[0]}</td>
             </tr>
     );
 }

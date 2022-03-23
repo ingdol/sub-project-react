@@ -7,3 +7,23 @@ ul{
     padding: 0;
     list-style: none;
   }
+.qnatop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.qnatop1 {    
+    width: 100px;
+    height: 100px;
+    margin: auto;  
+    border : 3px solid black; 
+    border-radius: 10px;       
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.qnatop1:hover{
+    cursor: pointer;
+    font-size: large;
+    border-color: rgb(90, 90, 90);
+}

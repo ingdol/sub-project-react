@@ -31,9 +31,7 @@ function QnaInsert(props) {
     };
     const onSubmit = (e) => {
         e.preventDefault();
-
         var frmData = new FormData(document.frmInsert);
-
         axios.post('http://localhost:8080/qnaInsert/', frmData)
             .then(
                 response => {

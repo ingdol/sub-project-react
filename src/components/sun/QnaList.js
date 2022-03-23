@@ -28,7 +28,7 @@ function QnaList(props) {
 
     return (
         <div>
-            <h3>상품 정보 조회</h3>
+            <h3>QnA 게시판</h3>
             <table border="1">
                 <thead>
                     <tr>
