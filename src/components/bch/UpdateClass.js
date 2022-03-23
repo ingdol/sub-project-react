@@ -68,9 +68,9 @@ function UpdateClass(props) {
     const onSubmit = (e) => {
         e.preventDefault();
 
-        var frmUpdate = new FormData(document.frmUpdate);
+        var frmUpdate = new FormData(document.ClassInsert);
 
-        axios.post('http://localhost:8080/UpdateClass/', frmUpdate)
+        axios.post('http://localhost:8080/UpdateClass', frmUpdate)
             .then(
                 response => {
                     alert("수정 완료");
@@ -85,7 +85,7 @@ function UpdateClass(props) {
                 <input type="hidden" value={Class.classNo} />
                 <table border="0" >
                     <div className="CreateClass">
-                        <tr><td colspan="2"><h3><img src="img/class1.png" width="50px" height="50px" alt=''/><b> 클래스 개설</b></h3></td>
+                        <tr><td colspan="2"><h3><img src="img/class.png" width="50px" height="50px" alt=''/><b> 클래스 개설</b></h3></td>
 
                         </tr>
                         <tr><td colspan="2"><hr width="900px" /></td></tr>
