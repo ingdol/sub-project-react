@@ -14,6 +14,7 @@ import CreateClass from './components/Create/CreateClass';
 import CreateClass2 from './components/Create/CreateClass2';
 import Login from './components/Login/Login';
 import LoginTest from './components/Login/LoginTest';
+import Bottom from './components/main/Bottom';
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
         <Route path="/qnadetailview/:hostqnaNo" element={<QnaDetailView></QnaDetailView>} />
         <Route path="/qnaupdate/:hostqnaNo" element={<QnaUpdate></QnaUpdate>} />
       </Routes>
+      <Bottom></Bottom>
     </div>
   );
 }
