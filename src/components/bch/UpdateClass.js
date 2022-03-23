@@ -140,6 +140,7 @@ function UpdateClass(props) {
 
                     </div>
                 </table >
+                <input type="submit" value="수정" />
             </form>
         </div>
     );
