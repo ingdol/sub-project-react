@@ -41,7 +41,7 @@ function CreateClass2(props) {
 
         var frmData = new FormData(document.ClassInsert);
 
-        axios.post('http://localhost:8080/product/insert/', frmData)
+        axios.post('http://localhost:8080/Class/insert/', frmData)
             .then(
                 response => {
                     alert("등록 완료");
@@ -53,7 +53,7 @@ function CreateClass2(props) {
     return (
         <div>
             <form name="ClassInsert" onSubmit={onSubmit} onReset={onReset}>
-                <table border="0" >
+                <table border="0" className="checkboxa2" >
                     <div className="CreateClass">
                         <tr><td colspan="2"><h3><img src="img/class.png" width="50px" height="50px" /><b> 클래스 개설</b></h3></td>
 
@@ -61,7 +61,7 @@ function CreateClass2(props) {
                         <tr><td colspan="2"><hr width="900px" /></td></tr>
                         <tr><td><h4>개설할 클래스의 주소를 선택해주세요.</h4></td><td></td></tr>
 
-                        <tr><td colspan="2"><select id="classArea" className="selectcss" value={cla.classArea} onChange={onChange}>
+                        <tr><td colspan="2"><select id="classArea" className="selectcss" onChange={onChange}>
                             <option value="">시/도 선택</option>
                             <option value="강원">강원</option>
                             <option value="경기">경기</option>
@@ -104,10 +104,10 @@ function CreateClass2(props) {
                         <tr><td colspan="2"><br /><br /><hr width="900px" /></td></tr>
                         <tr><td colspan="2"><h4>자신의 클래스를 소개해보세요.</h4></td></tr>
                         <tr><td colspan="2"><input type="text" id="classTitle" className="classTitle" placeholder="소개글의 제목을 입력해주세요."
-                            onfocus="this.placeholder=''" onblur="this.placeholder='소개글의 제목을 입력해주세요.'" value={cla.className} onChange={onChange} /></td></tr>
+                            onfocus="this.placeholder=''" onblur="this.placeholder='소개글의 제목을 입력해주세요.'" onChange={onChange} /></td></tr>
                         <tr><td colspan="2"><br /><textarea id="classInfo" name="classInfo" rows="15" cols="100" placeholder="클래스에 대한 설명을 입력해주세요"
                             onfocus="this.placeholder=''" onblur="this.placeholder='클래스에 대한 설명을 입력해주세요'" value={cla.classInfo} onChange={onChange}></textarea></td></tr>
-
+                        <tr><td colspan="2"><input type="submit" value="클래스 개설하기" className="subbox" onChange={onChange} /></td></tr>
                     </div>
                 </table >
             </form>

@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+
 a { text-decoration : none;}
 
 table { margin:0 auto;}
@@ -7,7 +9,6 @@ inbox {
     text-align: center;
     position: absolute;
     width: 1000px;
-    height: 800px;
     
     background: #FFFFFF;
     border: 1px solid #000000;
@@ -74,6 +75,47 @@ inbox {
     box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
     line-height:150%;
+  }
+  .checkboxa2{
+    text-align: center;
+    color: black;
+    position: relative;
+    overflow:scroll;
+    width: 1000px;
+    background: #FFFFFF;
+    line-height:150%;
+  }
+
+  
+.subbox{
+  position:relative;
+  
+    
+  width: 998px;
+  height: 100px;
+  text-align: center;
+  
+  background: #ff8080;
+  border: 3px solid #ff8080;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-size:300%;
+  font-family: 'Dongle', sans-serif;;
+  
+  color: white;
+          -webkit-transition:.4s;
+    -moz-transition:.4s;
+    -ms-transition:4s;
+    -o-transition:.4s;
+    transition:.4s;
+    top:53px;
+    right:53px;
+  }
+  
+  .subbox:hover{
+    background: #ff0000;
+    border: 3px solid #ff0000;
+    border-radius: 10px;
   }
   .select::-ms-expand{
   display:none;

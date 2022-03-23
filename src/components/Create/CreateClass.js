@@ -9,7 +9,7 @@ function CreateClass(props) {
         <div>
             <h3>약관에 동의해주세요.</h3><br />
 
-            <table border="0">
+            <table border="0" className="checkboxa2">
                 <tr>
                     <div className="checkboxa">
 
@@ -264,7 +264,7 @@ function CreateClass(props) {
                         상기 본인은 이상의 약관에 동의합니다<input type="checkbox" />
                     </div></tr>
             </table>
-            <br /><br /><br /><br />
+            <br /><br /><hr width="70%" /><br /><br />
             <Link to="/CreateClass2"><button className="NextButton" >다음</button>
             </Link>
 
