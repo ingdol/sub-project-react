@@ -11,12 +11,12 @@ function CreateClass2(props) {
     //state
     const [cla, setCla] = useState({
         classNo: '',
-        className: '',
+        classTitle: '',
         classInfo: '',
         hobbyNo: '',
-        classArea: '',
 
     });
+    const [classArea, setClassArea] = useState("");
 
     const onChange = (e) => {
         const { value, name } = e.target; // e.target 에서 name 과 value 를 추출       
@@ -25,11 +25,13 @@ function CreateClass2(props) {
             [name]: value // name 키를 가진 값을 value 로 설정
         });
     };
-
+    const handleSelect = (e) => {
+        setClassArea(e.target.value);
+    };
     const onReset = () => {
         setCla({
             classNo: '',
-            className: '',
+            classTitle: '',
             classInfo: '',
             hobbyNo: '',
             classArea: '',
@@ -51,7 +53,7 @@ function CreateClass2(props) {
     }
 
     return (
-        <div>
+        <div >
             <form name="ClassInsert" onSubmit={onSubmit} onReset={onReset}>
                 <table border="0" className="checkboxa2" >
                     <div className="CreateClass">
@@ -59,27 +61,29 @@ function CreateClass2(props) {
 
                         </tr>
                         <tr><td colspan="2"><hr width="900px" /></td></tr>
-                        <tr><td><h4>개설할 클래스의 주소를 선택해주세요.</h4></td><td></td></tr>
+                        <tr><td><input type="hidden" id="memNick" value="NickTest" onChange={onChange} />
+                            <h4>개설할 클래스의 주소를 선택해주세요.</h4></td><td></td></tr>
 
-                        <tr><td colspan="2"><select id="classArea" className="selectcss" onChange={onChange}>
-                            <option value="">시/도 선택</option>
-                            <option value="강원">강원</option>
-                            <option value="경기">경기</option>
-                            <option value="경남">경남</option>
-                            <option value="경북">경북</option>
-                            <option value="광주">광주</option>
-                            <option value="대구">대구</option>
-                            <option value="대전">대전</option>
-                            <option value="부산">부산</option>
-                            <option value="서울">서울</option>
-                            <option value="울산">울산</option>
-                            <option value="인천">인천</option>
-                            <option value="전남">전남</option>
-                            <option value="전북">전북</option>
-                            <option value="제주">제주</option>
-                            <option value="충남">충남</option>
-                            <option value="충북">충북</option>
-                        </select></td></tr>
+                        <tr><td colspan="2"><select name="classArea" className="classArea" value={classArea} onChange={handleSelect}>
+                            <option value={""} key={""}>시/도 선택</option>
+                            <option value={"강원"} key={"강원"}>강원</option>
+                            <option value={"경기"} key={"경기"}>경기</option>
+                            <option value={"경남"} key={"경남"}>경남</option>
+                            <option value={"경북"} key={"경북"}>경북</option>
+                            <option value={"광주"} key={"광주"}>광주</option>
+                            <option value={"대구"} key={"대구"}>대구</option>
+                            <option value={"대전"} key={"대전"} >대전</option>
+                            <option value={"부산"} key={"부산"}>부산</option>
+                            <option value={"서울"} key={"서울"}>서울</option>
+                            <option value={"울산"} key={"울산"} >울산</option>
+                            <option value={"인천"} key={"인천"} >인천</option>
+                            <option value={"전남"} key={"전남"}>전남</option>
+                            <option value={"전북"} key={"전북"}>전북</option>
+                            <option value={"제주"} key={"제주"}>제주</option>
+                            <option value={"충남"} key={"충남"}>충남</option>
+                            <option value={"충북"} key={"충북"}>충북</option>
+                        </select>
+                        </td></tr>
 
                         <tr><td colspan="2"><br /><br /><br /><hr width="900px" /></td></tr>
                         <tr><td><h4>클래스의 카테고리를 선택해주세요.</h4></td></tr>
@@ -103,8 +107,8 @@ function CreateClass2(props) {
                             <label for="toggle3-9"><img src="img/9.jpg" width="100px" height="100px" /></label></td></tr>
                         <tr><td colspan="2"><br /><br /><hr width="900px" /></td></tr>
                         <tr><td colspan="2"><h4>자신의 클래스를 소개해보세요.</h4></td></tr>
-                        <tr><td colspan="2"><input type="text" id="classTitle" className="classTitle" placeholder="소개글의 제목을 입력해주세요."
-                            onfocus="this.placeholder=''" onblur="this.placeholder='소개글의 제목을 입력해주세요.'" onChange={onChange} /></td></tr>
+                        <tr><td colspan="2"><input type="text" name="classTitle" className="classTitle" placeholder="소개글의 제목을 입력해주세요."
+                            onfocus="this.placeholder=''" onblur="this.placeholder='소개글의 제목을 입력해주세요.'" value={cla.classTitle} onChange={onChange} /></td></tr>
                         <tr><td colspan="2"><br /><textarea id="classInfo" name="classInfo" rows="15" cols="100" placeholder="클래스에 대한 설명을 입력해주세요"
                             onfocus="this.placeholder=''" onblur="this.placeholder='클래스에 대한 설명을 입력해주세요'" value={cla.classInfo} onChange={onChange}></textarea></td></tr>
                         <tr><td colspan="2"><input type="submit" value="클래스 개설하기" className="subbox" onChange={onChange} /></td></tr>

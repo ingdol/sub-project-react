@@ -27,16 +27,16 @@ function Login(props) {
         axios.post('http://localhost:8080/login', frmData)
             .then(
                 response => {
-                    alert("로그인 성공"); 
-                    history('/'); 
-                    
+                    alert("로그인 성공");
+                    history('/');
+
                 }
             );
     }
 
     return (
         <div>
-            <form name="loginForm" onSubmit={onSubmit} > 
+            <form name="loginForm" onSubmit={onSubmit} >
                 <input
                     type="text"
                     name="memId"
@@ -44,8 +44,8 @@ function Login(props) {
                     onChange={onChange} />
                 <input
                     type="text"
-                    name="memPwd"
-                    value={mem.memPwd}
+                    name="memPw"
+                    value={mem.memPw}
                     onChange={onChange} />
                 <input type="submit" value="등록" />
             </form>
