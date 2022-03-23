@@ -1,6 +1,10 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
+import './Class.css';
 function CreateClass(props) {
+
+    const [disable, setDisable] = React.useState(false);
+
     return (
         <div>
             <h3>약관에 동의해주세요.</h3><br />
@@ -55,7 +59,7 @@ function CreateClass(props) {
                         제5조(서비스의 중단)
                         <br /><br />
                         ① "데"는 컴퓨터 등 정보통신설비의 보수점검․교체 및 고장, 통신의 두절 등의 사유가 발생한 경우에는 서비스의 제공을 일시적으로 중단할 수 있습니다.
-                        <br />
+                        <br />n
                         ② "데"는 제1항의 사유로 서비스의 제공이 일시적으로 중단됨으로 인하여 이용자 또는 제3자가 입은 손해에 대하여 배상합니다. 단, "데"가 고의 또는 과실이 없음을 입증하는 경우에는 그러하지 아니합니다.
                         <br />
                         ③ 사업종목의 전환, 사업의 포기, 업체 간의 통합 등의 이유로 서비스를 제공할 수 없게 되는 경우에는 "데"는 제8조에 정한 방법으로 이용자에게 통지하고 당초 "데"에서 제시한 조건에 따라 소비자에게 보상합니다. 다만, "데"가 보상기준 등을 고지하지 아니한 경우에는 이용자들의 마일리지 또는 적립금 등을 "데"에서 통용되는 통화가치에 상응하는 현물 또는 현금으로 이용자에게 지급합니다.
@@ -261,11 +265,10 @@ function CreateClass(props) {
                     </div></tr>
             </table>
             <br /><br /><br /><br />
-            <input type="button" className="NextButton" value="다음" />
+            <Link to="/CreateClass2"><button className="NextButton" >다음</button>
+            </Link>
 
-
-        </div >
+        </div>
     );
 }
-
 export default CreateClass;
