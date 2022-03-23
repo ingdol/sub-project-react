@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import { Link, useNavigate } from 'react-router-dom';
 import './SpaceClassList.css';
 
 function ClassListItem(props) {
@@ -9,7 +10,7 @@ function ClassListItem(props) {
             <span id='SpaceCard'>
                 <p id='title'>{props.class.classTitle}</p>
                 <p id='area'>{props.class.classArea}</p>
-                <button class='fixBtn'>수정</button>
+                <Link to={"/UpdateClass/" + props.class.classNo}><button class='fixBtn'>수정</button></Link>
             </span>
         </span>
     );

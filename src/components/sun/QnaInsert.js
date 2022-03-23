@@ -44,29 +44,29 @@ function QnaInsert(props) {
     return (
         <div>
 
-            <div class="board_wrap">
-                <div class="board_title">
+            <div className="board_wrap">
+                <div className="board_title">
                     <strong>QnA 등록</strong>
                 </div>
-                <form class="board_write_wrap" name="frmInsert" onSubmit={onSubmit} onReset={onReset}>
-                    <div class="board_write">
-                        <div class="title">
+                <form className="board_write_wrap" name="frmInsert" onSubmit={onSubmit} onReset={onReset}>
+                    <div className="board_write">
+                        <div className="title">
                             <dl>
                                 <dt>제목</dt>
                                 <dd><input type="text" name="hostqnaTitle" value={qna.hostqnaTitle} onChange={onChange} placeholder="제목"/></dd>
                             </dl>
                         </div>
-                        <div class="info">
+                        <div className="info">
                             <dl>
                                 <dt>글쓴이</dt>
                                 <dd><input type="text" name="memNick" value={qna.memNick} onChange={onChange} placeholder="글쓴이"/></dd>
                             </dl>
                         </div>
-                        <div class="cont">
+                        <div className="cont">
                             <textarea name="hostqnaInfo" value={qna.hostqnaInfo} onChange={onChange}></textarea>
                         </div>
                     </div>
-                    <div class="bt_wrap">
+                    <div className="bt_wrap">
                         <input type="submit" value="등록" />
                         <input type="reset" value="취소" /> 
                     </div>

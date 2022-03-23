@@ -1,51 +1,80 @@
-import React, { useState } from 'react';
-import { Link, Routes, Route, useNavigate } from 'react-router-dom';
-import ClassSelect from './ClassSelect';
-import ClassCheck from './ClassCheck';
-import './Class.css';
+import React, { useEffect, useState } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import './Class.css';
 
-function CreateClass2(props) {
-    let history = useNavigate();
+function UpdateClass(props) {
+    // (1) Part1 : classNo 해당되는 상품 정보 받아오기 
+    // detailView와 동일
+
+    // 파라미터로 받아 온 값
+    const { classNo } = useParams();
 
     //state
-    const [cla, setCla] = useState({
+    const [Class, setClass] = useState({
         classNo: '',
-        className: '',
-        classInfo: '',
-        hobbyNo: '',
         classArea: '',
-
+        hobbyNo: '',
+        classTitle: '',
+        classInfo: ''
     });
 
+    const [loading, setLoading] = useState(false);
+
+    // 서버에 요청해서 데이터 받아옴
+    // state 값 저장
+    const loadData = async () => {
+        setLoading(true);
+        const response = await axios.get('http://localhost:8080/DetailClass/' + classNo);
+        console.log(response.data);
+        setClass({
+            classNo: response.data.classNo,
+            classArea: response.data.classArea,
+            hobbyNo: response.data.hobbyNo,
+            classTitle: response.data.classTitle,
+            classInfo: response.data.classInfo
+        });
+        setLoading(false);
+    }
+
+    // 렌더링할 때마다 호출 
+    // 빈배열 : loadData() 한 번만 호출
+    useEffect(() => {
+        loadData();
+    }, []);
+
+    // (2) Part2 : 폼에 입력된 값을 전송하고 DB 업데이트
+    // insert와 유사 (Mapping Url만 다름고 onChange, onReset, onSubmit 동일)
     const onChange = (e) => {
         const { value, name } = e.target; // e.target 에서 name 과 value 를 추출       
-        setCla({
-            ...cla, // 기존의 prd 객체를 복사한 뒤
+        setClass({
+            ...Class, // 기존의 prd 객체를 복사한 뒤
             [name]: value // name 키를 가진 값을 value 로 설정
         });
     };
 
     const onReset = () => {
-        setCla({
+        setClass({
             classNo: '',
-            className: '',
-            classInfo: '',
-            hobbyNo: '',
             classArea: '',
+            hobbyNo: '',
+            classTitle: '',
+            classInfo: ''
         })
     };
+
+    let history = useNavigate();
 
     const onSubmit = (e) => {
         e.preventDefault();
 
-        var frmData = new FormData(document.ClassInsert);
+        var frmUpdate = new FormData(document.frmUpdate);
 
-        axios.post('http://localhost:8080/Class/insert/', frmData)
+        axios.post('http://localhost:8080/UpdateClass/', frmUpdate)
             .then(
                 response => {
-                    alert("등록 완료");
-                    history('/intro'); //상품 정보 조회 화면으로 이동
+                    alert("수정 완료");
+                    history('/SpaceClassList'); // 클래스 공간 조회 화면으로 이동
                 }
             );
     }
@@ -53,7 +82,8 @@ function CreateClass2(props) {
     return (
         <div>
             <form name="ClassInsert" onSubmit={onSubmit} onReset={onReset}>
-                <table border="0" className="checkboxa2" >
+                <input type="hidden" value={Class.classNo} />
+                <table border="0" >
                     <div className="CreateClass">
                         <tr><td colspan="2"><h3><img src="img/class.png" width="50px" height="50px" /><b> 클래스 개설</b></h3></td>
 
@@ -61,7 +91,7 @@ function CreateClass2(props) {
                         <tr><td colspan="2"><hr width="900px" /></td></tr>
                         <tr><td><h4>개설할 클래스의 주소를 선택해주세요.</h4></td><td></td></tr>
 
-                        <tr><td colspan="2"><select id="classArea" className="selectcss" onChange={onChange}>
+                        <tr><td colspan="2"><select id="classArea" className="selectcss" value={Class.classArea} onChange={onChange}>
                             <option value="">시/도 선택</option>
                             <option value="강원">강원</option>
                             <option value="경기">경기</option>
@@ -104,15 +134,15 @@ function CreateClass2(props) {
                         <tr><td colspan="2"><br /><br /><hr width="900px" /></td></tr>
                         <tr><td colspan="2"><h4>자신의 클래스를 소개해보세요.</h4></td></tr>
                         <tr><td colspan="2"><input type="text" id="classTitle" className="classTitle" placeholder="소개글의 제목을 입력해주세요."
-                            onfocus="this.placeholder=''" onblur="this.placeholder='소개글의 제목을 입력해주세요.'" onChange={onChange} /></td></tr>
+                            onfocus="this.placeholder=''" onblur="this.placeholder='소개글의 제목을 입력해주세요.'" value={Class.classTitle} onChange={onChange} /></td></tr>
                         <tr><td colspan="2"><br /><textarea id="classInfo" name="classInfo" rows="15" cols="100" placeholder="클래스에 대한 설명을 입력해주세요"
-                            onfocus="this.placeholder=''" onblur="this.placeholder='클래스에 대한 설명을 입력해주세요'" value={cla.classInfo} onChange={onChange}></textarea></td></tr>
-                        <tr><td colspan="2"><input type="submit" value="클래스 개설하기" className="subbox" onChange={onChange} /></td></tr>
+                            onfocus="this.placeholder=''" onblur="this.placeholder='클래스에 대한 설명을 입력해주세요'" value={Class.classInfo} onChange={onChange}></textarea></td></tr>
+
                     </div>
                 </table >
             </form>
-        </div >
+        </div>
     );
 }
 
-export default CreateClass2;
+export default UpdateClass;
