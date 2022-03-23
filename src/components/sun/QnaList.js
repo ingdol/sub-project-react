@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import QnaListItem from './QnaListItem';
 import './Qna.css';
+import QnaListCommon from './QnaListCommon';
 
 function QnaList(props) {
     // state
@@ -30,25 +31,30 @@ function QnaList(props) {
     return (
         <div>
 
-            <div class="board_wrap">
-                <div class="board_title">
+            <div className="board_wrap">
+                <div className="board_title">
                     <strong>QnA 게시판</strong>
                 </div>
                 <div class="board_list_wrap">
-                    <div class="board_list">
-                        <div class="top">
-                            <div class="num">번호</div>
-                            <div class="title">제목</div>
-                            <div class="writer">글쓴이</div>
-                            <div class="date">작성일</div>
+                    <div className="board_list">
+                        <div className="top">
+                            <div className="num">번호</div>
+                            <div className="title">제목</div>
+                            <div className="writer">글쓴이</div>
+                            <div className="date">작성일</div>
                         </div>
+                            {
+                                data.map(function (qna, i) {
+                                    return <QnaListCommon qna={qna} key={i} />
+                                })
+                            }
                             {
                                 data.map(function (qna, i) {
                                     return <QnaListItem qna={qna} key={i} />
                                 })
                             }    
                     </div>
-                    <div class="btn">
+                    <div className="btn">
                         <Link to="/qnaInsert"><div className='qnatop1'>QnA등록</div></Link>
                     </div>        
                 </div>
