@@ -13,6 +13,8 @@ import SpaceClassList from './components/bch/SpaceClassList';
 import CreateClass from './components/Create/CreateClass';
 import CreateClass2 from './components/Create/CreateClass2';
 import Login from './components/Login/Login';
+import UpdateClass from './components/bch/UpdateClass';
+
 
 function App() {
   return (
@@ -36,6 +38,7 @@ function App() {
         <Route path="/qnaInsert" element={<QnaInsert />} />
         <Route path="/qnadetailview/:hostqnaNo" element={<QnaDetailView></QnaDetailView>} />
         <Route path="/qnaupdate/:hostqnaNo" element={<QnaUpdate></QnaUpdate>} />
+        <Route path="/UpdateClass/:classNo" element={<UpdateClass />} />
       </Routes>
     </div>
   );
