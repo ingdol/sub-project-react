@@ -94,7 +94,6 @@ ul{
 
 .board_list > div {
     border-bottom: 1px solid #ddd;
-    font-size: 0;
 }
 
 .board_list > div.top {

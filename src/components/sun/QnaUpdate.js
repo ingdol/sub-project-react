@@ -82,13 +82,13 @@ function QnaUpdate(props) {
                         <div class="title">
                             <dl>
                                 <dt>제목</dt>
-                                <dd><input type="text" name="hostqnaTitle" value={qna.hostqnaTitle} onChange={onChange} placeholder="제목"/></dd>
+                                <dd><input type="text" name="hostqnaTitle" value={qna.hostqnaTitle} onChange={onChange}/></dd>
                             </dl>
                         </div>
                         <div class="info">
                             <dl>
                                 <dt>글쓴이</dt>
-                                <dd><input type="text" name="memNick" value={qna.memNick} onChange={onChange} placeholder="글쓴이"/></dd>
+                                <dd><input type="text" name="memNick" value={qna.memNick} onChange={onChange} readOnly/></dd>
                             </dl>
                             <dl className='dnone'>
                                 <dt>글번호</dt>
