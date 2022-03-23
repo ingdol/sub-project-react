@@ -16,12 +16,10 @@ function App() {
       <div className="Nav">
         <Navbar />
       </div>
-      <Main></Main>
-      <Intro></Intro>
-      <QnaTop></QnaTop>
-      <hr />
-      <Link to="/SpaceClassList">[공간&클래스 조회] </Link>
       <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/QnaTop" element={<QnaTop />} />
+        <Route path="/Intro" element={<Intro />} />
         <Route path="/SpaceClassList" element={<SpaceClassList />} />
       </Routes>
     </div>
