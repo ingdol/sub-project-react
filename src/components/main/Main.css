@@ -1,8 +1,8 @@
 .background {
     background-image: url('./background.jpg');
     background-size: cover;
-    height: 400px;
-    padding-top: 150px;
+    height: 450px;
+    padding-top: 170px;
 }
 
 .background P {
@@ -16,47 +16,124 @@
 
 .hostInfo {
     padding-top: 3%;
+    padding-bottom: 7%;
 }
 .hostText {
     display: flex;
     padding: 0 20%;
+    margin-bottom: 2%;
 }
 
 .hostItem {
-    padding: 7%;
+    padding: 5%;
     text-align: left;
 }
 
 
-.loading span {
-    display: inline-block;
-    margin: 0 -.05em;
+.loading {
+    display: flex;
+    justify-content: center;
+    position :relative;
+    margin-top: 5px;
+    font-size: 45px;
+    font-weight: 600;
+    color: #242424;
+}
+.loading div {
+    position: absolute;
+    margin: 0.1em 0;
+    margin-left: -445px;
     animation: loading 15.0s infinite;
-  }
-  .loading span:nth-child(1) {
+}
+.loading p {
+    position: absolute;
+    margin: 0 -.05em;
+    margin-left: 167px;
+}
+.loading div:nth-child(1) {
     opacity: 0;
     animation-delay: 0.0s;
-  }
-  .loading span:nth-child(2) {
+}
+.loading div:nth-child(2) {
     opacity: 0;
     animation-delay: 5.0s;
-  }
-  .loading span:nth-child(3) {
+}
+.loading div:nth-child(3) {
     opacity: 0;
     animation-delay: 10.0s;
-  }
-  @keyframes loading {
+    padding-right: 35px;
+}
+@keyframes loading {
     0%, 100% {
         opacity: 0;
         transform: none;
     }
     15% {
         opacity: 1;
-        transform: translateY(-20px);
+        transform: translateY(-5px);
     }
-    
+
     30% {
         opacity: 0;
         transform: none;
     }
-  }
+}
+
+.hostSubInfo {
+    margin-top: 80px;
+    font-size: 18px;
+    color: #4e4e4e;
+    font-weight: 500;
+}
+
+.hostItem p:nth-child(1) {
+    font-size: 50px;
+    font-weight: 700;
+    color: #40A6FB;
+    margin-bottom: 0;
+}
+.hostItem p:nth-child(2) {
+    font-size: 22px;
+    font-weight: 700;
+    color: #2e2e2e;
+}
+.hostItem p:nth-child(3) {
+    color: #4e4e4e;
+    font-weight: 500;
+    line-height: 1.5;
+}
+.stepInfo {
+    background-color: rgb(241, 241, 241);
+    padding: 3%;
+}
+.stepInfo p:nth-child(1) {
+    font-size: 40px;
+    font-weight: 600;
+}
+.stepInfo p:nth-child(2) {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: -15px;
+}
+.stepBox {
+    display: flex;
+    justify-content: center;
+    padding: 0 10%;
+}
+
+.stepItem {
+    padding: 3%;
+}
+.stepItem img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.stepItem p:nth-child(2) {
+    font-size: 23px;
+    font-weight: 600;
+}
+.stepItem p:nth-child(3) {
+    font-size: 20px;
+    font-weight: 500;
+    padding: 5%;
+}
