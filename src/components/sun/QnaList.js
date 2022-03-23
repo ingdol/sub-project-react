@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import QnaListItem from './QnaListItem';
 import './Qna.css';
 
@@ -45,8 +46,11 @@ function QnaList(props) {
                                 data.map(function (qna, i) {
                                     return <QnaListItem qna={qna} key={i} />
                                 })
-                            }            
+                            }    
                     </div>
+                    <div class="btn">
+                        <Link to="/qnaInsert"><div className='qnatop1'>QnA등록</div></Link>
+                    </div>        
                 </div>
             </div>
 
