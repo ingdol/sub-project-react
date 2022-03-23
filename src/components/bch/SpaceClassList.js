@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import SpaceClassListItem from './SpaceClassListItem';
+import SpaceListItem from './SpaceListItem';
 import ClassListItem from './ClassListItem';
 
 function SpaceClassList(props) {
@@ -30,7 +30,7 @@ function SpaceClassList(props) {
             <h2>내 공간</h2>
             {
                 data.map(function (space, i) {
-                    return <SpaceClassListItem space={space} key={i} />
+                    return <SpaceListItem space={space} key={i} />
                 })
             }
             <hr id='SpaceClassLine' />

@@ -9,6 +9,7 @@ function SpaceClassListItem(props) {
             <span id='SpaceCard'>
                 <p id='title'>{props.space.spaceTitle}</p>
                 <p id='area'>{props.space.spaceArea}</p>
+                <button class='fixBtn'>수정</button>
             </span>
         </span>
     );

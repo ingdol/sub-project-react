@@ -32,3 +32,14 @@
     height: 3px;
     background-color: #5da5f7;
 }
+.fixBtn {
+    margin-left: 210px !important;
+    margin-bottom: 5px;
+    background-color: #5da5f7;
+    border-radius: 5px;
+    width: 80px;
+    height: 30px;
+    color: white;
+    border: 0;
+    outline: 0;
+}
