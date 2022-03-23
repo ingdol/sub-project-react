@@ -2,7 +2,8 @@ import React from 'react';
 import { Link, Routes, Route } from 'react-router-dom';
 import Inbox from './inbox';
 import CreateClass from './CreateClass';
-
+import CreateClass2 from './CreateClass2';
+import './Class.css';
 function intro(props) {
 
 
@@ -18,6 +19,7 @@ function intro(props) {
             <Routes>
                 <Route path="/" element={<Inbox />} />
                 <Route path="/CreateClass" element={<CreateClass />} />
+                <Route path="/CreateClass2" element={<CreateClass2 />} />
             </Routes>
         </div>
     );
