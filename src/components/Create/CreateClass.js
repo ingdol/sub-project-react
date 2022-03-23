@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import './Class.css';
 function CreateClass(props) {
@@ -266,7 +265,7 @@ function CreateClass(props) {
                     </div></tr>
             </table>
             <br /><br /><br /><br />
-            <Link to="/CreateClass2"><Button className="NextButton" >다음</Button>
+            <Link to="/CreateClass2"><button className="NextButton" >다음</button>
             </Link>
 
         </div>
