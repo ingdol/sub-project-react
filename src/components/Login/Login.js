@@ -23,15 +23,18 @@ function Login(props) {
         e.preventDefault();
 
         var frmData = new FormData(document.loginForm);
-
+        console.log(frmData);
         axios.post('http://localhost:8080/login', frmData)
             .then(
-                response => {
-                    alert("로그인 성공"); 
-                    history('/'); 
-                    
-                }
-            );
+                    response => {
+                        console.log(response);
+                        alert("로그인 성공"); 
+                        history('/');                     
+                    }
+            )
+            .catch(()=>{
+                alert("로그인실패 다시 입력하세요");
+            }) 
     }
 
     return (
@@ -44,11 +47,7 @@ function Login(props) {
                     onChange={onChange} />
                 <input
                     type="text"
-<<<<<<< HEAD
                     name="memPw"
-=======
-                    name="memPwd"
->>>>>>> bch
                     value={mem.memPw}
                     onChange={onChange} />
                 <input type="submit" value="등록" />
