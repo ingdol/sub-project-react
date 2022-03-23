@@ -4,8 +4,6 @@ import AxiosSpring from './components/AxiosSpring';
 import Intro from './components/Create/intro';
 import QnaTop from './components/sun/QnaTop';
 import SpaceClassList from './components/bch/SpaceClassList';
-import QnaList from './components/sun/QnaList';
-import Sun from './components/sun/Sun';
 
 
 function App() {

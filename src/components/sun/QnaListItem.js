@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 
 function QnaListItem(props) {
     return (
-            <tr>
-                <td>{props.qna.hostqnaNo}</td>
-                <td>{props.qna.memNick}</td>
-                <td><Link to={"/qnadetailview/" + props.qna.hostqnaNo}>{props.qna.hostqnaTitle}</Link></td>
-                <td>{props.qna.hostqnaDate.split('T')[0]}</td>
-            </tr>
+        <div>
+            <div class="num">{props.qna.hostqnaNo}</div>
+            <div class="title"><Link to={"/qnadetailview/" + props.qna.hostqnaNo}>{props.qna.hostqnaTitle}</Link></div>
+            <div class="writer">{props.qna.memNick}</div>
+            <div class="date">{props.qna.hostqnaDate.split('T')[0]}</div>
+        </div>  
     );
 }
 
