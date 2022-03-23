@@ -1,9 +1,9 @@
+
 import QnaList from './components/sun/QnaList';
 import Navbar from './components/main/Navbar';
 import Main from './components/main/Main';
 import React from 'react';
 import './App.css';
-import { Link, Routes, Route } from 'react-router-dom';
 import Intro from './components/Create/intro';
 import QnaTop from './components/sun/QnaTop';
 import QnaInsert from './components/sun/QnaInsert';
@@ -16,6 +16,10 @@ import Login from './components/Login/Login';
 import LoginTest from './components/Login/LoginTest';
 import Bottom from './components/main/Bottom';
 import UpdateClass from './components/bch/UpdateClass';
+import { Route, Routes, BrowserRouter, Router } from 'react-router-dom';
+import './App.css';
+import HostSign from './pages/HostSign';
+import SignIn from './pages/SignIn';
 
 function App() {
   return (
@@ -42,6 +46,12 @@ function App() {
         <Route path="/qnaupdate/:hostqnaNo" element={<QnaUpdate></QnaUpdate>} />
         <Route path="/UpdateClass/:classNo" element={<UpdateClass />} />
       </Routes>
+
+      <Routes>
+        <Route path='/hostsign' element={<HostSign />} />
+        <Route path='/signin' element={<SignIn />} />
+      </Routes>
+
       <Bottom></Bottom>
     </div>
   );
