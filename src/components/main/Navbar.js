@@ -45,17 +45,17 @@ useEffect(() => {
                     {/* 메뉴리스트 */}
                     <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                         <li className='nav-item'>
-                            <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+                            <Link to='/Intro' className='nav-links' onClick={closeMobileMenu}>
                                 CREATE
                             </Link>
                         </li>
                         <li className='nav-item'>
-                            <Link to='/services' className='nav-links' onClick={closeMobileMenu}>
+                            <Link to='/SpaceClassList' className='nav-links' onClick={closeMobileMenu}>
                                 MY
                             </Link>
                         </li>
                         <li className='nav-item'>
-                            <Link to='/products' className='nav-links' onClick={closeMobileMenu}>
+                            <Link to='/QnaTop' className='nav-links' onClick={closeMobileMenu}>
                                 Q&A
                             </Link>
                         </li>
