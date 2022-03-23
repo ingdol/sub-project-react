@@ -8,7 +8,7 @@ function Login(props) {
     //state
     const [mem, setMem] = useState({
         memId: '',
-        memPw: ''
+        memPwd: ''
     });
 
     const onChange = (e) => {
@@ -44,8 +44,8 @@ function Login(props) {
                     onChange={onChange} />
                 <input
                     type="text"
-                    name="memPw"
-                    value={mem.memPw}
+                    name="memPwd"
+                    value={mem.memPwd}
                     onChange={onChange} />
                 <input type="submit" value="등록" />
             </form>
