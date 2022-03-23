@@ -12,6 +12,11 @@ ul{
     justify-content: center;
     align-items: center;
 }
+
+.board_wrap .btn{
+    display: inline-block;
+    margin-left: 80%;
+}
 .qnatop1 {    
     width: 100px;
     height: 70px;
