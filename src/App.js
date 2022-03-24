@@ -30,7 +30,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/LoginTest" element={<LoginTest />} />
-        <Route path="/login" element={<Login />} />
         <Route path="/QnaTop" element={<QnaTop />} />
         <Route path="/Intro" element={<Intro />} />
         <Route path="/SpaceClassList" element={<SpaceClassList/>} />
