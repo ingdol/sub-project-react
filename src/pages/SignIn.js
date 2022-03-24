@@ -1,10 +1,13 @@
 import React, { useRef, useState } from 'react'
 import "./SignIn.css"
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 function HostSign() {
     const idInput = useRef(null)
     const pwInput = useRef(null)
+
+    let history = useNavigate();
 
     // 오류 메세지
     const [idMsg, setIdMsg] = useState('')
@@ -37,7 +40,7 @@ function HostSign() {
                 console.log(respone.data)
                 window.sessionStorage.setItem("sessionId", respone.data.memId);
                 window.sessionStorage.setItem("sessionNick", respone.data.memNick);
-                document.location.href = '/'
+                history('/');
                 
             } else if (respone.data.result === "fail") {
                 console.log(respone.data.result)

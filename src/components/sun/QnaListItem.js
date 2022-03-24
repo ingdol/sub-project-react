@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function QnaListItem(props) {
+    console.log(window.sessionStorage.getItem("sessionNick"));
+    console.log(window.sessionStorage.getItem("sessionId"));
     return (
         <div>
             <div className="num">{props.qna.hostqnaNo}</div>
