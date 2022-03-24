@@ -4,8 +4,11 @@ import { Link } from 'react-router-dom';
 import QnaListItem from './QnaListItem';
 import './Qna.css';
 import QnaListCommon from './QnaListCommon';
+import { useNavigate } from 'react-router-dom';
+
 
 function QnaList(props) {
+    let history = useNavigate();    
     // state
     // useState([]) 임!! 배열에 담음!! 주의...
     const [data, setData] = useState([]);
@@ -54,14 +57,31 @@ function QnaList(props) {
                                 })
                             }    
                     </div>
-                    <div className="btn">
-                        <Link to="/qnaInsert"><div className='qnatop1'>QnA등록</div></Link>
+                    <div className="btn" onClick={ch}>
+                        {/* <Link to="/qnaInsert"> */}
+                            <div className='qnatop1'>QnA등록</div>
+                        {/* </Link> */}
                     </div>        
                 </div>
             </div>
 
         </div>
     );
+
+
+    function ch(e){
+        if(window.sessionStorage.getItem("sessionNick") != null){
+            console.log("세션있음");
+            history('/qnaInsert');
+        }
+        else{
+            e.preventDefault();
+            alert("로그인하세요");
+            history('/qnalist');
+        }
+    }
 }
+
+
 
 export default QnaList;
