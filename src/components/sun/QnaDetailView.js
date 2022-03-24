@@ -9,7 +9,7 @@ function QnaDetailView(props) {
     const {hostqnaNo} = useParams();
     const {memNick} = useParams();
     const sessionNick = window.sessionStorage.getItem("sessionNick");
-    console.log(sessionNick);
+    console.log('세션닉네임 : '+sessionNick+'/받아온 닉네임 : '+memNick);
 
     // 렌더링할 때마다 호출 
     // 빈배열 : loadData() 한 번만 호출
@@ -57,7 +57,7 @@ function QnaDetailView(props) {
      // state 값 저장
      const loadData = async () => {
          setLoading(true);
-         const response = await axios.get('http://localhost:8080/qnadetailview/'+hostqnaNo);
+         const response = await axios.get('http://localhost:8080/qnadetailview/'+hostqnaNo+'/'+memNick);
         //  console.log(response.data);
         //  console.log(response.data.hostqnaDate);
         //  console.log(response.data.hostqnaDate.split('T')[0]);
@@ -78,7 +78,7 @@ function QnaDetailView(props) {
      }
      
      
-     //if(sessionNick == props.qna.memNick){
+     if(sessionNick == memNick){
      return (
             <div>
     
@@ -120,47 +120,47 @@ function QnaDetailView(props) {
     
             </div>
          );
-     //}
+     }
 
-    //  else{ //로그인된 닉네임과 작성자가 일치하지않을때 수정,삭제 못함
-    //     return (
-    //         <div>
+     else{ //로그인된 닉네임과 작성자가 일치하지않을때 수정,삭제 못함
+        return (
+            <div>
     
-    //             <section className="board_wrap">
-    //                 <div className="board_title">
-    //                     <strong>QnA 상세게시판</strong>
-    //                 </div>
-    //                 <div className="board_view_wrap">
-    //                     <div className="board_view">
-    //                         <div className="title">
-    //                             제목 : {qna.hostqnaTitle}
-    //                         </div>
-    //                         <div className="info">
-    //                             <dl>
-    //                                 <dt>번호</dt>
-    //                                 <dd>{qna.hostqnaNo}</dd>
-    //                             </dl>
-    //                             <dl>
-    //                                 <dt>글쓴이</dt>
-    //                                 <dd>{qna.memNick}</dd>
-    //                             </dl>
-    //                             <dl>
-    //                                 <dt>작성일</dt>
-    //                                 <dd>{qna.hostqnaDate}</dd>
-    //                             </dl>                            
-    //                         </div>
-    //                         <div className="cont">
-    //                             <br/><br/>
-    //                             {qna.hostqnaInfo}
-    //                             <br/><br/><br/>
-    //                         </div>
-    //                     </div>
-    //                 </div>
-    //             </section>
+                <section className="board_wrap">
+                    <div className="board_title">
+                        <strong>QnA 상세게시판</strong>
+                    </div>
+                    <div className="board_view_wrap">
+                        <div className="board_view">
+                            <div className="title">
+                                제목 : {qna.hostqnaTitle}
+                            </div>
+                            <div className="info">
+                                <dl>
+                                    <dt>번호</dt>
+                                    <dd>{qna.hostqnaNo}</dd>
+                                </dl>
+                                <dl>
+                                    <dt>글쓴이</dt>
+                                    <dd>{qna.memNick}</dd>
+                                </dl>
+                                <dl>
+                                    <dt>작성일</dt>
+                                    <dd>{qna.hostqnaDate}</dd>
+                                </dl>                            
+                            </div>
+                            <div className="cont">
+                                <br/><br/>
+                                {qna.hostqnaInfo}
+                                <br/><br/><br/>
+                            </div>
+                        </div>
+                    </div>
+                </section>
     
-    //         </div>
-    //      );
-    // }
+            </div>
+         );
+    }
 }
 
 export default QnaDetailView;

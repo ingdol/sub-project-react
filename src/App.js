@@ -48,7 +48,7 @@ function App() {
       <Routes>
         <Route path="/qnalist" element={<QnaList />} />
         <Route path="/qnaInsert" element={<QnaInsert />} />
-        <Route path="/qnadetailview/:hostqnaNo" element={<QnaDetailView></QnaDetailView>} />
+        <Route path="/qnadetailview/:hostqnaNo/:memNick" element={<QnaDetailView></QnaDetailView>} />
         <Route path="/qnaupdate/:hostqnaNo" element={<QnaUpdate></QnaUpdate>} />
         <Route path="/UpdateClass/:classNo" element={<UpdateClass />} />
       </Routes>
