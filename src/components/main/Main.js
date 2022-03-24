@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from './Button';
 import './Main.css';
+import { Link } from 'react-router-dom';
 import hostData from './hostData.js';
 import stepData from './stepData.js';
 import hostQnA from './hostQ&A.js';
@@ -17,8 +18,9 @@ function Main(props) {
             <div className='background'>
                 <p>클래스 및 공간대여</p>
                 <p>누구나 지금 바로</p>
-                <p>
+                <p><Link to='/hostsign' className='btn-link' >
                     <Button buttonSize='btn--large'>5분만에 호스트 지원하기</Button>
+                    </Link>
                 </p>
             </div>
             <div className='hostInfo'>
