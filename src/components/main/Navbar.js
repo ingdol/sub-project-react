@@ -46,6 +46,7 @@ function Navbar(props) {
         window.sessionStorage.removeItem('sessionId')
         window.sessionStorage.removeItem('sessionNick')
         setIsLogin(false)
+        history('/');
     }
 
     return (
