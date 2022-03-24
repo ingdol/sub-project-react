@@ -90,14 +90,14 @@ function UpdateClass(props) {
     return (
         <div >
             <form name="ClassInsert" onSubmit={onSubmit} onReset={onReset}>
-                <input type="text" value={Class.classNo} className="classNo" onChange={onChange} />
+                <input type="hidden" value={Class.classNo} Name="classNo" onChange={onChange} />
                 <table border="0" className="checkboxa2" >
                     <div className="CreateClass">
                         <tr><td colspan="2"><h3><img src="img/class.png" width="50px" height="50px" /><b> 클래스 개설</b></h3></td>
 
                         </tr>
                         <tr><td colspan="2"><hr width="900px" /></td></tr>
-                        <tr><td><input type="text" id="memNick" value={Class.memNick} className="memNick" onChange={onChange} />
+                        <tr><td><input type="hidden" Name="memNick" value={Class.memNick} className="memNick" onChange={onChange} />
                             <h4>개설할 클래스의 주소를 선택해주세요.</h4></td><td></td></tr>
 
                         <tr><td colspan="2"><select name="classArea" className="classArea" onChange={handleSelect}>
