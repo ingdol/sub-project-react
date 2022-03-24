@@ -11,11 +11,11 @@ function intro(props) {
         <div>
             <ul>
                 <li>
-                    <b>개설 페이지</b>
-
+                    <br />
+                    <br /><br /><br />
                 </li>
             </ul>
-            <hr />
+
 
 
             <Routes>

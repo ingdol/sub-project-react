@@ -2,8 +2,8 @@ import { click } from '@testing-library/user-event/dist/click';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Class.css';
-import Class from './Class.css';
-function CreateClass(props) {
+import './Space.css';
+function CreateSpace(props) {
 
     const [allCheck, setAllCheck] = useState(false);
     const [oneCheck, setOneCheck] = useState(false);
@@ -43,13 +43,13 @@ function CreateClass(props) {
     }, [oneCheck, twoCheck]);
 
     const click = (e) => {
-        window.location.replace("/CreateClass2")
+        window.location.replace("/CreateSpace2")
     };
 
     return (
         <div >
 
-            <table border="0" className="checkboxa2">
+            <table border="1" className="checkboxa2">
                 <tr align="left"><h3><img src="img/write.png" width="50px" height="50px" />약관에 동의해주세요.</h3><hr width="100%" align="left" /><br /></tr>
                 <tr align="left"><b>이용약관 동의 <span>(필수)</span></b>
                     <div className="checkboxa">
@@ -460,7 +460,7 @@ function CreateClass(props) {
                     <label for="all-check">모든 약관에 동의합니다</label></h3></tr>
 
                 <tr><br /><br /><hr width="70%" /><br /><br /></tr>
-                <tr><button className="NextButton" onClick={click}><h1>다음</h1></button>
+                <tr><button className="NextButtonspace" onClick={click}><h1>다음</h1></button>
                 </tr>
             </table>
 
@@ -468,4 +468,4 @@ function CreateClass(props) {
         </div >
     );
 }
-export default CreateClass;
+export default CreateSpace;

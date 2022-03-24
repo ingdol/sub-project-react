@@ -20,7 +20,8 @@ import { Route, Routes, BrowserRouter, Router } from 'react-router-dom';
 import './App.css';
 import HostSign from './pages/HostSign';
 import SignIn from './pages/SignIn';
-
+import CreateSpace from './components/Create/CreateSpace';
+import CreateSpace2 from './components/Create/CreateSpace2';
 function App() {
   return (
     <div className="App">
@@ -32,14 +33,16 @@ function App() {
         <Route path="/LoginTest" element={<LoginTest />} />
         <Route path="/QnaTop" element={<QnaTop />} />
         <Route path="/Intro" element={<Intro />} />
-        <Route path="/SpaceClassList" element={<SpaceClassList/>} />
+        <Route path="/SpaceClassList" element={<SpaceClassList />} />
         <Route path="/CreateClass" element={<CreateClass />} />
         <Route path="/CreateClass2" element={<CreateClass2 />} />
+        <Route path="/CreateSpace" element={<CreateSpace />} />
+        <Route path="/CreateSpace2" element={<CreateSpace2 />} />
       </Routes>
 
       {/* 서연 Routes */}
       <Routes>
-        <Route path="/qnalist" element={<QnaList/>} />
+        <Route path="/qnalist" element={<QnaList />} />
         <Route path="/qnaInsert" element={<QnaInsert />} />
         <Route path="/qnadetailview/:hostqnaNo" element={<QnaDetailView></QnaDetailView>} />
         <Route path="/qnaupdate/:hostqnaNo" element={<QnaUpdate></QnaUpdate>} />
