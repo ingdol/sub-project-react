@@ -26,6 +26,7 @@ transition: all 0.3s ease-out;
 }
 
 .btn--medium {
+margin-left: 10px;
 padding: 8px 20px;
 font-size: 18px;
 }

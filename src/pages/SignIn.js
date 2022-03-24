@@ -37,7 +37,7 @@ function HostSign() {
                 console.log(respone.data)
                 window.sessionStorage.setItem("sessionId", respone.data.memId);
                 window.sessionStorage.setItem("sessionNick", respone.data.memNick);
-                window.location.href = '/'
+                document.location.href = '/'
                 
             } else if (respone.data.result === "fail") {
                 console.log(respone.data.result)
