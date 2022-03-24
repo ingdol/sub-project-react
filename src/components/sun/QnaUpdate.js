@@ -5,6 +5,9 @@ import './Qna.css';
 
 function QnaUpdate(props) {
     let history = useNavigate();
+    const sessionNick = window.sessionStorage.getItem("sessionNick");
+    console.log(sessionNick);
+
     const { hostqnaNo } = useParams();
     const [qna,setQna] = useState({
         hostqnaNo:'',
@@ -20,7 +23,7 @@ function QnaUpdate(props) {
 
     const loadData = async () => {
         setLoading(true);
-        const response = await axios.get('http://localhost:8080/qnadetailview/' + hostqnaNo);
+        const response = await axios.get('http://localhost:8080/qnadetailview/' + hostqnaNo +'/'+sessionNick);
         console.log(response.data);
         setQna({
             hostqnaNo:response.data.hostqnaNo,
@@ -88,7 +91,7 @@ function QnaUpdate(props) {
                         <div class="info">
                             <dl>
                                 <dt>글쓴이</dt>
-                                <dd><input type="text" name="memNick" value={qna.memNick} onChange={onChange} readOnly/></dd>
+                                <dd><input type="text" name="memNick" value={qna.memNick} readOnly/></dd>
                             </dl>
                             <dl className='dnone'>
                                 <dt>글번호</dt>

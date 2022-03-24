@@ -298,6 +298,29 @@ ul{
     border-bottom: 1px solid #000;
 }
 
+.contcomment {
+    padding: 2px;
+    background-color: #cbe7ff;
+    border-bottom: 0.5px solid #000;
+}
+
+.contcomment p{
+    font-weight: bold;
+    font-size: large;
+    color: rgb(49, 49, 49);
+}
+.contcomment .commentmain{
+    float: left;
+    display: block;
+    width: 21%;
+    padding:10px;
+}
+.contcomment .commentinfo{
+    margin-left: 23%;
+    width: 73%;
+    padding:10px;
+}
+
 .board_write .cont textarea {
     display: block;
     width: 100%;
