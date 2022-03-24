@@ -3,11 +3,14 @@ import { Button } from './Button';
 import './Main.css';
 import hostData from './hostData.js';
 import stepData from './stepData.js';
+import hostQnA from './hostQ&A.js';
 
 function Main(props) {
 
     let [host, hostChange] = useState(hostData);
     let [step, stepChange] = useState(stepData);
+    let [fna, fnaChange] = useState(hostQnA);
+    let [modal, modalSet] = useState(false);
 
     return (
         <div>
@@ -51,8 +54,29 @@ function Main(props) {
                         )
                     })
                     }
-                    <div></div>
                 </div>
+            </div>
+            {/*  <div>
+                <p>F&A</p>
+                <div className=''>
+                    {
+                    [fna,modal,modalSet].map(function(a, i){
+                        return (
+                        <Fna fna={fna[i]} modal={modal} modalSet={modalSet} i={i}>
+                        </Fna>
+                        
+                        )
+                    })
+                    }
+                    
+                        
+                </div>
+            </div> */}
+            <div className='hostEnd'>
+                <div className='endTitle'>
+                    지금 바로 호스트에 지원하고 수익을 창출하세요.
+                </div>
+                <Button buttonSize='btn--large'>5분만에 호스트 지원하기</Button>
             </div>
         </div>
     );
@@ -77,6 +101,27 @@ function Step(props){
             <div>
                 <img src={props.step.next} />
             </div> */}
+        </div>
+    )
+}
+
+function Fna(props){
+    return(
+        <div className=''>
+            <p>{props.fna.title}</p>
+            <button onClick={ ()=>{ props.modalSet(!props.modal) } }>열고닫기</button>
+            { props.modal === true
+                        ?<Modal fna={props.fna}></Modal>
+                        : null }
+        </div>
+    )
+}
+
+function Modal(props){
+    /* 2. 자식컴포넌트에서 props 파라미터 입력 후 사용 */
+    return (
+        <div className='modal'>
+        <h2>{ props.fna.content }</h2>
         </div>
     )
 }

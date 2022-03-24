@@ -1,0 +1,40 @@
+.LoginBox {
+    padding: 4%;
+}
+.LoginBox div{
+    padding: 10px;
+}
+
+.LoginTitle{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.inputIDPW{
+    width: 285px;
+    height: 60px;
+    padding-left: 20px;
+    border: 1.5px solid rgb(179, 176, 176);
+    border-radius: 10px;
+}
+.nonStyle {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color:#fff;
+}
+.btn--large {
+    width: 310px;
+    height: 65px;
+    font-size: 20px;
+    font-weight: 550;
+    background: #40A6FB;
+    border: none;
+    border-radius: 10px;
+}
+.btn--large:hover {
+    transition: all 0.3s ease-out;
+    background: #0079db;
+    color: #fff;
+    border: 1px solid #0079db;
+}
