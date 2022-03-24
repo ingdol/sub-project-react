@@ -45,8 +45,8 @@ function CreateClass2(props) {
         axios.post('http://localhost:8080/Class/insert/', frmData)
             .then(
                 response => {
-                    alert("등록 완료");
-                    history('/intro'); //상품 정보 조회 화면으로 이동
+                    alert("클래스 개설이 완료되었습니다.");
+                    history('/SpaceClassList'); //상품 정보 조회 화면으로 이동
                 }
             );
     }

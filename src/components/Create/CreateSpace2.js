@@ -54,8 +54,8 @@ function CreateSpace2(props) {
         axios.post('http://localhost:8080/Space/insert/', frmData)
             .then(
                 response => {
-                    alert("등록 완료");
-                    history('/intro'); //상품 정보 조회 화면으로 이동
+                    alert("공간 개설이 완료되었습니다.");
+                    history('/SpaceClassList'); //상품 정보 조회 화면으로 이동
                 }
             );
     }
@@ -70,7 +70,7 @@ function CreateSpace2(props) {
                         </tr>
                         <tr><td colspan="2"><hr width="900px" /></td></tr>
                         <tr><td><input type="hidden" name="memNick" value={spa.memNick} onChange={onChange} />
-                            <h4>개설할 클래스의 주소를 선택해주세요.</h4></td><td></td></tr>
+                            <h4>개설할 공간의 주소를 선택해주세요.</h4></td><td></td></tr>
 
                         <tr><td colspan="2"><select name="spaceArea" className="spaceArea" value={spaceArea} onChange={handleSelect}>
                             <option value={""} key={""}>시/도 선택</option>
@@ -94,7 +94,7 @@ function CreateSpace2(props) {
                         </td></tr>
 
                         <tr><td colspan="2"><br /><br /><br /><hr width="900px" /></td></tr>
-                        <tr><td><h4>클래스의 카테고리를 선택해주세요.</h4></td></tr>
+                        <tr><td><h4>당신의 공간은 어떤 공간입니까?</h4></td></tr>
                         <tr><td><select name="spaceCtgNo" className="spaceCtgNo" value={spaceCtgNo} onChange={handleSelect2}>
                             <option value="1">파티룸</option>
                             <option value="2">회의실</option>
