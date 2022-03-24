@@ -18,9 +18,12 @@ function Main(props) {
             <div className='background'>
                 <p>클래스 및 공간대여</p>
                 <p>누구나 지금 바로</p>
-                <p><Link to='/hostsign' className='btn-link' >
-                    <Button buttonSize='btn--large'>5분만에 호스트 지원하기</Button>
-                    </Link>
+                <p>
+                    <Button buttonSize='btn--large'>
+                        <Link to='/hostsign' className='btn-link' >
+                            5분만에 호스트 지원하기</Link>
+                    </Button>
+                    
                 </p>
             </div>
             <div className='hostInfo'>
@@ -43,7 +46,10 @@ function Main(props) {
                     })
                     }
                 </div>
-                <Button buttonSize='btn--large'>5분만에 호스트 지원하기</Button>
+                <Button buttonSize='btn--large'>
+                        <Link to='/hostsign' className='btn-link' >
+                        5분만에 호스트 지원하기</Link>
+                </Button>
             </div>
             <div className='stepInfo'>
                 <p>호스트가 되는 과정</p>
@@ -78,7 +84,10 @@ function Main(props) {
                 <div className='endTitle'>
                     지금 바로 호스트에 지원하고 수익을 창출하세요.
                 </div>
-                <Button buttonSize='btn--large'>5분만에 호스트 지원하기</Button>
+                <Button buttonSize='btn--large'>
+                    <Link to='/hostsign' className='btn-link' >
+                        5분만에 호스트 지원하기</Link>
+                </Button>
             </div>
         </div>
     );

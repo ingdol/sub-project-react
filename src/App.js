@@ -10,6 +10,7 @@ import QnaInsert from './components/sun/QnaInsert';
 import QnaDetailView from './components/sun/QnaDetailView';
 import QnaUpdate from './components/sun/QnaUpdate';
 import SpaceClassList from './components/bch/SpaceClassList';
+import SpaceClassListAll from './components/bch/SpaceClassListAll';
 import CreateClass from './components/Create/CreateClass';
 import CreateClass2 from './components/Create/CreateClass2';
 import Login from './components/Login/Login';
@@ -23,6 +24,7 @@ import SignIn from './pages/SignIn';
 import CreateSpace from './components/Create/CreateSpace';
 import CreateSpace2 from './components/Create/CreateSpace2';
 function App() {
+
   return (
     <div className="App">
       <div className="Nav">
@@ -34,6 +36,8 @@ function App() {
         <Route path="/QnaTop" element={<QnaTop />} />
         <Route path="/Intro" element={<Intro />} />
         <Route path="/SpaceClassList" element={<SpaceClassList />} />
+        <Route path="/SpaceClassList" element={<SpaceClassList />} />
+        <Route path="/SpaceClassListAll" element={<SpaceClassListAll />} />
         <Route path="/CreateClass" element={<CreateClass />} />
         <Route path="/CreateClass2" element={<CreateClass2 />} />
         <Route path="/CreateSpace" element={<CreateSpace />} />

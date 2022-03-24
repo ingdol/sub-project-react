@@ -20,10 +20,29 @@ function SpaceClassList(props) {
         setLoading(false);
     }
 
+    const postSession = async () => {
+        setLoading(true);
+        const response = await axios.get('http://localhost:8080/SessionForList');
+    }
+
     // 렌더링할 때마다 호출 
     // 빈배열 : loadData() 한 번만 호출
     useEffect(() => {
-        loadData();
+        axios.post(
+            'http://localhost:8080/SessionForList', 
+            { 
+                sNick : window.sessionStorage.getItem("sessionNick")
+            }) 
+            .then(function (response) {
+                 console.log(response); 
+                }) 
+            .catch(error => { 
+                console.log('error : ',error.response) 
+            });
+            setTimeout( () => {
+                loadData()
+            }, 100);
+        // loadData();
     }, []);
     return (
         <div>

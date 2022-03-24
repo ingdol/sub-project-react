@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import SpaceListItem from './SpaceListItem';
-import ClassListItem from './ClassListItem';
+import SpaceListItem from './SpaceListItemAll';
+import ClassListItem from './ClassListItemAll';
 
 function SpaceClassList(props) {
     // state
@@ -13,7 +13,7 @@ function SpaceClassList(props) {
     // state 값 저장
     const loadData = async () => {
         setLoading(true);
-        const response = await axios.get('http://localhost:8080/SpaceClassList');
+        const response = await axios.get('http://localhost:8080/SpaceClassListAll');
         console.log(response.data);
         setData(response.data.space);
         setData2(response.data.class);
@@ -27,14 +27,14 @@ function SpaceClassList(props) {
     }, []);
     return (
         <div>
-            <h2>내 공간</h2>
+            <h2>공간 구경</h2>
             {
                 data.map(function (space, i) {
                     return <SpaceListItem space={space} key={i} />
                 })
             }
             <hr id='SpaceClassLine' />
-            <h2>내 클래스</h2>
+            <h2>클래스 구경</h2>
             {
                 data2.map(function (class2, i) {
                     return <ClassListItem class={class2} key={i} />
