@@ -1,11 +1,14 @@
 import React, { useRef, useState } from 'react'
 import "./HostSign.css"
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 function HostSign() {
   const nameInput = useRef(null)
   const numInput = useRef(null)
   const infoInput = useRef(null)
+
+  let history = useNavigate();
 
   // 오류 메세지
   const [nameMsg, setNameMsg] = useState('')
@@ -47,7 +50,7 @@ function HostSign() {
       console.log(err)
     })
     
-    window.location.href = '/'
+    history('/')
   }
 
   return (

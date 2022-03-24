@@ -1,4 +1,4 @@
-.container {
+.host-container {
     display: flex;
     position: relative;
     flex-direction: column;
@@ -100,7 +100,7 @@ textarea:focus {
 
 .warningName {
     position: absolute;
-    bottom: 19.5rem;
+    bottom: 26.5rem;
     left: 6rem;
     color: red;
     font-size: medium;
@@ -109,7 +109,7 @@ textarea:focus {
 
 .warningNum {
     position: absolute;
-    bottom: 14.5rem;
+    bottom: 21.7rem;
     left: 6rem;
     color: red;
     font-size: medium;

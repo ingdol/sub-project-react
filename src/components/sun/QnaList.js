@@ -16,7 +16,7 @@ function QnaList(props) {
     const loadData = async () => {
         setLoading(true);
         const response = await axios.get('http://localhost:8080/qnalist');
-        console.log(response.data);
+        // console.log(response.data);
         console.log(response.data.qnaList);
         setData(response.data.qnaList);
         setLoading(false);

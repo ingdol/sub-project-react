@@ -10,11 +10,10 @@ function CreateClass2(props) {
 
     //state
     const [cla, setCla] = useState({
-        classNo: '',
         classTitle: '',
         classInfo: '',
         hobbyNo: '',
-
+        memNick: sessionStorage.getItem("sessionNick"),
     });
     const [classArea, setClassArea] = useState("");
 
@@ -34,7 +33,7 @@ function CreateClass2(props) {
             classTitle: '',
             classInfo: '',
             hobbyNo: '',
-            classArea: '',
+            memNick: sessionStorage.getItem("sessionNick"),
         })
     };
 
@@ -51,7 +50,7 @@ function CreateClass2(props) {
                 }
             );
     }
-
+    // const Nick = sessionStorage.getItem("sessionNick")
     return (
         <div >
             <form name="ClassInsert" onSubmit={onSubmit} onReset={onReset}>
@@ -61,7 +60,7 @@ function CreateClass2(props) {
 
                         </tr>
                         <tr><td colspan="2"><hr width="900px" /></td></tr>
-                        <tr><td><input type="hidden" id="memNick" value="NickTest" onChange={onChange} />
+                        <tr><td><input type="hidden" name="memNick" value={cla.memNick} onChange={onChange} />
                             <h4>개설할 클래스의 주소를 선택해주세요.</h4></td><td></td></tr>
 
                         <tr><td colspan="2"><select name="classArea" className="classArea" value={classArea} onChange={handleSelect}>
