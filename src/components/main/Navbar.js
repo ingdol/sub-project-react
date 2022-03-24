@@ -4,8 +4,11 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 import { Button } from './Button';
 import './Navbar.css';
 import { IconContext } from 'react-icons/lib';
+import { useNavigate } from 'react-router-dom';
 
 function Navbar(props) {
+    
+    let history = useNavigate();
     /* 클릭하기 전 false = bar모양 */
     const [click, setClick] = useState(false);
     const [button, setButton] = useState(true);
@@ -40,9 +43,9 @@ function Navbar(props) {
 
     const onLogout = () => {
     	// sessionStorage 에 user_id 로 저장되어있는 아이템을 삭제한다.
-        window.sessionStorage.removeItem('sessionId', 'sessionNick')
-        // App 으로 이동(새로고침)
-        document.location.href = '/'
+        window.sessionStorage.removeItem('sessionId')
+        window.sessionStorage.removeItem('sessionNick')
+        setIsLogin(false)
     }
 
     return (
