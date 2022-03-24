@@ -198,3 +198,7 @@ padding:100px;
   .red{
     Color:red;
   }
+
+  #subbox {
+    margin-bottom: 30px;
+  }
