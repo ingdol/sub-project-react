@@ -61,7 +61,7 @@ useEffect(() => {
                         </li>
                         <li className='nav-btn'>
                             {/* {button ? ( */}
-                                <Link to='/login' className='btn-link' >
+                                <Link to='/signin' className='btn-link' >
                                     <Button buttonStyle='btn--outline'
                                     onClick={closeMobileMenu}>SIGN UP</Button>
                                 </Link>
