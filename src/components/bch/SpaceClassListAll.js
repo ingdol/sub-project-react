@@ -27,14 +27,14 @@ function SpaceClassList(props) {
     }, []);
     return (
         <div>
-            <h2>내 공간</h2>
+            <h2>공간 구경</h2>
             {
                 data.map(function (space, i) {
                     return <SpaceListItem space={space} key={i} />
                 })
             }
             <hr id='SpaceClassLine' />
-            <h2>내 클래스</h2>
+            <h2>클래스 구경</h2>
             {
                 data2.map(function (class2, i) {
                     return <ClassListItem class={class2} key={i} />
