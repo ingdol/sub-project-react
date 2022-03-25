@@ -18,22 +18,23 @@ ul{
     margin-left: 80%;
 }
 .qnatop1 {    
-    width: 100px;
-    height: 70px;
-    margin-right: 10px;
-    font-weight: bold;
-    border : 3px solid black; 
-    border-radius: 10px;       
     display: flex;
     justify-content: center;
     align-items: center;    
-    border-color: rgb(90, 90, 90);
+    width: 180px;
+    height: 60px;
+    font-size: 21px;
+    font-weight: 550;
+    background: #5baaf5;
+    border: none;
+    border-radius: 10px;
+    color: white;
 }
 .qnatop1:hover{
     cursor: pointer;
     font-size: large;
     font-weight: bolder;
-    background-color: #40A6FB;;
+    background-color: #0079db;;
     opacity: 0.8;
 }
 
@@ -50,7 +51,7 @@ ul{
 }
 
 .board_title strong {
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 .board_title p {
@@ -65,14 +66,19 @@ ul{
 }
 
 .bt_wrap button {
-    display: inline-block;
+    float: right;
+    margin: 0 10px 20px 10px;
+    border: 1px solid #004175;
     min-width: 80px;
     margin-left: 10px;
     padding: 10px;
-    border: 1px solid #000;
-    border-radius: 2px;
     font-size: 1.4rem;
     border-radius: 10px;
+    font-weight: 500;
+    background: #5baaf5;
+    border: none;
+    border-radius: 10px;
+    color: white;
 }
 
 .bt_wrap button:first-child {
@@ -81,7 +87,8 @@ ul{
 
 .bt_wrap button:hover {
     font-weight: bolder;
-    background-color:#40A6FB;;
+    background: #0079db;
+    color: #fff;
     cursor: pointer;
 }
 
@@ -108,7 +115,7 @@ ul{
     display: inline-block;
     padding: 15px 0;
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.25rem;
 }
 
 .board_list > div.top > div {
@@ -188,7 +195,7 @@ ul{
 .board_view .title {
     padding: 20px 15px;
     border-bottom: 1px dashed #ddd;
-    font-size: 2rem;
+    font-size: 1.6rem;
 }
 
 .board_view .info {
@@ -225,7 +232,7 @@ ul{
 .board_view .info dl dt,
 .board_view .info dl dd {
     display: inline-block;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
 
 
@@ -300,7 +307,7 @@ ul{
 
 .contcomment {
     padding: 2px;
-    background-color: #cbe7ff;
+    background-color: #eef7fc;
     border-bottom: 0.5px solid #000;
 }
 
@@ -333,13 +340,19 @@ ul{
 
 
 .bt_wrap input {
-    display: inline-block;
-    min-width: 100px;
-    height: 50px;
-    border: 1px solid #000;
-    border-radius: 2px;
+    float: right;
+    margin: 0 10px 20px 10px;
+    border: 1px solid #004175;
+    min-width: 80px;
+    margin-left: 10px;
+    padding: 10px;
     font-size: 1.4rem;
     border-radius: 10px;
+    font-weight: 500;
+    background: #5baaf5;
+    border: none;
+    border-radius: 10px;
+    color: white;
 }
 
 .bt_wrap input:first-child {
@@ -349,7 +362,8 @@ ul{
 
 .bt_wrap input:hover {
     font-weight: bolder;
-    background-color: #40A6FB;;
+    background: #0079db;
+    color: #fff;
     cursor: pointer;
 }
 .board_write .info .dnone{

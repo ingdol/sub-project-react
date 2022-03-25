@@ -56,7 +56,7 @@ function HostSign() {
 
     return (
         <div className='host-container'>
-            <h3>Login</h3>
+            <h1>LOGIN</h1>
             <form className='host-form'>
                 <div className='use-input'>
                     <span className='inputTitle'>Email</span>
