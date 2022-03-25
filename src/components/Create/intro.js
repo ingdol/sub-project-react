@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, Routes, Route } from 'react-router-dom';
 import Inbox from './inbox';
 
-import './Class.css';
+import './Class2.css';
 
 function intro(props) {
 

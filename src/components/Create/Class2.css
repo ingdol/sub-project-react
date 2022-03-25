@@ -90,14 +90,14 @@ width:1000px;
   
     
   width: 100%;
-  height: 100px;
+  height: 70px;
   text-align: center;
   
   background: #ff8080;
   border: 3px solid #ff8080;
   box-sizing: border-box;
   border-radius: 3px;
-  font-size:300%;
+  font-size:250%;
   font-family: 'Dongle', sans-serif;;
   
   color: white;
@@ -110,8 +110,8 @@ width:1000px;
   }
   
   .subbox:hover{
-    background: #ff0000;
-    border: 3px solid #ff0000;
+    background: #ff4a4a;
+    border: 3px solid #ff4a4a;
     border-radius: 10px;
   }
 

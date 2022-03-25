@@ -1,8 +1,8 @@
 import { click } from '@testing-library/user-event/dist/click';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import './Class.css';
-import Class from './Class.css';
+import './Class2.css';
+import Class from './Class2.css';
 function CreateClass(props) {
 
     const [allCheck, setAllCheck] = useState(false);

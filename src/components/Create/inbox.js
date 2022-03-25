@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, Routes, Route } from 'react-router-dom';
-import './Class.css';
+import './Class2.css';
 import './box.css'
 function inbox(props) {
     return (

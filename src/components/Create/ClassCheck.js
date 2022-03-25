@@ -1,5 +1,5 @@
 import React from 'react';
-import './Class.css';
+import './Class2.css';
 
 function ClassCheck(props) {
     return (

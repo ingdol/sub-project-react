@@ -1,13 +1,15 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, Routes, Route, useNavigate } from 'react-router-dom';
-import './Class.css';
+import './Class2.css';
 import './Space.css';
 import axios from 'axios';
+import PopupDom from './PopupDom';
+import PopupPostCode from './PopupPostCode';
+
 
 function CreateSpace2(props) {
     let history = useNavigate();
 
-    //state
     const [spa, setSpa] = useState({
         spaceTitle: '',
         spaceInfo: '',
@@ -60,6 +62,18 @@ function CreateSpace2(props) {
             );
     }
     // const Nick = sessionStorage.getItem("sessionNick")
+    const [isPopupOpen, setIsPopupOpen] = useState(false)
+
+    // 팝업창 열기
+    const openPostCode = () => {
+        setIsPopupOpen(true)
+    }
+
+    // 팝업창 닫기
+    const closePostCode = () => {
+        setIsPopupOpen(false)
+    }
+
     return (
         <div >
             <form name="SpaceInsert" onSubmit={onSubmit} onReset={onReset}>
@@ -72,7 +86,7 @@ function CreateSpace2(props) {
                         <tr><td><input type="hidden" name="memNick" value={spa.memNick} onChange={onChange} />
                             <h4>개설할 공간의 주소를 선택해주세요.</h4></td><td></td></tr>
 
-                        <tr><td colspan="2"><select name="spaceArea" className="spaceArea" value={spaceArea} onChange={handleSelect}>
+                        {/* <tr><td colspan="2"><select name="spaceArea" className="spaceArea" value={spaceArea} onChange={handleSelect}>
                             <option value={""} key={""}>시/도 선택</option>
                             <option value={"강원"} key={"강원"}>강원</option>
                             <option value={"경기"} key={"경기"}>경기</option>
@@ -90,7 +104,17 @@ function CreateSpace2(props) {
                             <option value={"제주"} key={"제주"}>제주</option>
                             <option value={"충남"} key={"충남"}>충남</option>
                             <option value={"충북"} key={"충북"}>충북</option>
-                        </select>
+                        </select> */}
+
+                        <tr><td colspan="2"><input type="text" id="spaceArea" className="memAddress1" name="spaceArea" size="70" placeholder="직접 입력" readonly />
+                            <button type='button' className="Addressbutton" onClick={openPostCode}>우편번호 검색</button>
+                            <div id='popupDom'>
+                                {isPopupOpen && (
+                                    <PopupDom>
+                                        <PopupPostCode onClose={closePostCode} />
+                                    </PopupDom>
+                                )}
+                            </div>
                         </td></tr>
 
                         <tr><td colspan="2"><br /><br /><br /><hr width="900px" /></td></tr>
@@ -109,15 +133,17 @@ function CreateSpace2(props) {
                         <tr><td colspan="2"><h4>당신의 공간을 소개해보세요.</h4></td></tr>
                         <tr><td colspan="2"><input type="text" name="spaceTitle" className="spaceTitle" placeholder="소개글의 제목을 입력해주세요."
                             onfocus="this.placeholder=''" onblur="this.placeholder='소개글의 제목을 입력해주세요.'" value={spa.spaceTitle} onChange={onChange} /></td></tr>
-                        <tr><td colspan="2"><br /><textarea id="spaceInfo" name="spaceInfo" rows="15" cols="100" placeholder="당신의 공간을 소개해보세요."
+                        <tr><td colspan="2"><br /><textarea className="spaceInfo" name="spaceInfo" rows="15" cols="100" placeholder="당신의 공간을 소개해보세요."
                             onfocus="this.placeholder=''" onblur="this.placeholder='당신의 공간을 소개해보세요.'" value={spa.spaceInfo} onChange={onChange}></textarea></td></tr>
-                        <tr><td colspan="2"><br /><hr width="900px" /><h4>공간 상세설정</h4><br /><br /></td></tr>
-                        <tr><td colspan="2"><input type="text" className="spacePrice1" name="spacePrice1" placeholder="최소 비용" /> ~
-                            <input type="text" className="spacePrice2" name="spacePrice2" placeholder="최대 비용" /><br /><br /></td></tr>
-                        <tr><td colspan="2"><input type="text" className="spacePerNum" name="spacePerNum" placeholder="최소 수용인원" /> ~
+                        <tr><td colspan="2"><br /><hr width="900px" /><h4>공간 상세설정</h4></td></tr>
+                        <tr><td colspan="2"><span className="pop">회원들이 공간을 대여하는데 필요한 최소 비용과 최대 비용을 적어주세요.<br /></span>
+                            <input type="text" className="spacePrice1" name="spacePrice1" placeholder="최소 비용" /> ~
+                            <input type="text" className="spacePrice2" name="spacePrice2" placeholder="최대 비용" /><br /></td></tr>
+                        <tr><td colspan="2"><span className="pop">공간에 수용할 수 있는 인원의 범위를 적어주세요.<br /></span>
+                            <input type="text" className="spacePerNum" name="spacePerNum" placeholder="최소 수용인원" /> ~
                             <input type="text" className="spacePerMax" name="spacePerMax" placeholder="최소 수용인원" /><br /><br /></td></tr>
-
-
+                        {/* 
+                        <tr><td colspan="2"><input type="file" name="file3" className="uploadFile3" accept="image/*" /></td></tr> */}
 
                         <tr><td colspan="2"><input type="submit" value="공간 개설하기" className="subbox2" onChange={onChange} /></td></tr>
                     </div>

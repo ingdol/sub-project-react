@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, Routes, Route, useNavigate } from 'react-router-dom';
 import ClassSelect from './ClassSelect';
 import ClassCheck from './ClassCheck';
-import './Class.css';
+import './Class2.css';
 import axios from 'axios';
 
 function CreateClass2(props) {
