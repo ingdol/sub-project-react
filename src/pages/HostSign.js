@@ -55,7 +55,7 @@ function HostSign() {
 
   return (
     <div className='host-container'>
-      <h3>호스트 신청</h3>
+      <h1>호스트 신청</h1>
       <form className='host-form'>
         <div className='use-input'>
           <span className='inputTitle'>호스트 명</span>
