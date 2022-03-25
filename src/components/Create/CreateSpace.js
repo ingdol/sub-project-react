@@ -460,8 +460,11 @@ function CreateSpace(props) {
                     <label for="all-check">모든 약관에 동의합니다</label></h3></tr>
 
                 <tr><br /><br /><hr width="70%" /><br /><br /></tr>
-                <tr><button className="NextButtonspace" onClick={click}><h1>다음</h1></button>
-                </tr>
+                <tr><div>{
+                    allCheck === true
+                        ? <button className="NextButtonspace" onClick={click}><h1>다음</h1></button>
+                        : <button className="NextButtonspace" onClick={click} disabled><h1>다음</h1></button>
+                }</div></tr>
             </table>
 
 

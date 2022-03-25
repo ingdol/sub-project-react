@@ -108,7 +108,7 @@ function CreateClass2(props) {
                         <tr><td colspan="2"><h4>자신의 클래스를 소개해보세요.</h4></td></tr>
                         <tr><td colspan="2"><input type="text" name="classTitle" className="classTitle" placeholder="소개글의 제목을 입력해주세요."
                             onfocus="this.placeholder=''" onblur="this.placeholder='소개글의 제목을 입력해주세요.'" value={cla.classTitle} onChange={onChange} /></td></tr>
-                        <tr><td colspan="2"><br /><textarea id="classInfo" name="classInfo" rows="15" cols="100" placeholder="클래스에 대한 설명을 입력해주세요"
+                        <tr><td colspan="2"><br /><textarea className="classInfo" name="classInfo" rows="15" cols="100" placeholder="클래스에 대한 설명을 입력해주세요"
                             onfocus="this.placeholder=''" onblur="this.placeholder='클래스에 대한 설명을 입력해주세요'" value={cla.classInfo} onChange={onChange}></textarea></td></tr>
                         <tr><td colspan="2"><input type="submit" value="클래스 개설하기" className="subbox" onChange={onChange} /></td></tr>
                     </div>

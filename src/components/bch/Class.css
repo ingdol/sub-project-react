@@ -88,14 +88,14 @@ padding:100px;
   
     
   width: 100%;
-  height: 100px;
+  height: 70px;
   text-align: center;
   
   background: #ff8080;
   border: 3px solid #ff8080;
   box-sizing: border-box;
   border-radius: 3px;
-  font-size:300%;
+  font-size:250%;
   font-family: 'Dongle', sans-serif;;
   
   color: white;
@@ -108,8 +108,8 @@ padding:100px;
   }
   
   .subbox:hover{
-    background: #ff0000;
-    border: 3px solid #ff0000;
+    background: #ff4a4a;
+    border: 3px solid #ff4a4a;
     border-radius: 10px;
   }
   .select::-ms-expand{
@@ -136,10 +136,16 @@ padding:100px;
   background: #FF8686;
   border-radius: 3px;
   box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+  -webkit-transition:.4s;
+  -moz-transition:.4s;
+  -ms-transition:4s;
+  -o-transition:.4s;
+  transition:.4s;
+  top:53px;
   }
-  .NextButton:hover{
+  .NextButton:hover:enabled{
   
-    background: #ff0000;
+    background: #ff4a4a;
   
     }
   .toggle3 input[type=radio]{
@@ -188,11 +194,13 @@ padding:100px;
   }
   .classInfo{
     background: #FFFFFF; 
-    border: 1px solid rgba(0, 0, 0, 0.25);
-    box-sizing: border-box; 
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
-    border-radius: 10px; padding:10px;
-    padding: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  box-sizing: border-box; 
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+  border-radius: 10px; 
+  padding:20px;
+  font-weight: normal;
+  font-size: 11pt;
   }
 
   .red{
