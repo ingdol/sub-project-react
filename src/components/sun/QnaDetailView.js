@@ -36,7 +36,7 @@ function QnaDetailView(props) {
     const onUpdateItem =() =>{
         if (window.confirm("수정하시겠습니까?")) {            
                 history('/qnaupdate/'+hostqnaNo);
-                // window.location.reload();
+                window.location.reload();
         }
     }
 
@@ -50,6 +50,7 @@ function QnaDetailView(props) {
         hostqnaFaq:'',
         hostqnaCom:''
      });
+     const [comment,setComment] = useState('');
      
      const [loading, setLoading] = useState(false);
  
@@ -73,13 +74,158 @@ function QnaDetailView(props) {
             hostqnaFaq:response.data.hostqnaFaq,
             hostqnaCom:response.data.hostqnaCom
          });
+         setComment(response.data.hostqnaCom);
+         console.log(comment);
          //setLoading(false);
          console.log(qna.memNick);
+         console.log(response.data.hostqnaCom);
      }
+
+     console.log(comment);
      
-     
-     if(sessionNick == memNick){
+     if(sessionNick === memNick && comment !== null){ // 1.수정o / 2.관리자답변o
      return (
+            <div>
+    
+                <section className="board_wrap">
+                    <div className="board_title">
+                        <strong>QnA 상세게시판</strong>
+                    </div>
+                    <div className="board_view_wrap">
+                        <div className="board_view">
+                            <div className="title">
+                                제목 : {qna.hostqnaTitle}
+                            </div>
+                            <div className="info">
+                                <dl>
+                                    <dt>번호</dt>
+                                    <dd>{qna.hostqnaNo}</dd>
+                                </dl>
+                                <dl>
+                                    <dt>글쓴이</dt>
+                                    <dd>{qna.memNick}</dd>
+                                </dl>
+                                <dl>
+                                    <dt>작성일</dt>
+                                    <dd>{qna.hostqnaDate}</dd>
+                                </dl>                            
+                            </div>
+                            <div className="cont">
+                                <br/><br/>
+                                {qna.hostqnaInfo}
+                                <br/><br/><br/>
+                            </div>
+                            {/* ------------------------------------------- */}
+                            <div className="contcomment">
+                                <br/>
+                                <div className='commentmain'><p>관리자</p></div>
+                                <div className='commentinfo'>
+                                <p>{qna.hostqnaCom}</p>
+                                </div>
+                                <br/>
+                            </div>
+                        </div>
+                        <div className="bt_wrap">
+                            <button onClick={onUpdateItem}>수정</button>
+                            <button onClick={onDeleteItem}>삭제</button>
+                        </div>
+                    </div>
+                </section>
+    
+            </div>
+         );
+     }
+
+     else if(sessionNick !== memNick && comment !== null){ // 수정x / 관리자답변o
+        return (
+            <div>
+    
+                <section className="board_wrap">
+                    <div className="board_title">
+                        <strong>QnA 상세게시판</strong>
+                    </div>
+                    <div className="board_view_wrap">
+                        <div className="board_view">
+                            <div className="title">
+                                제목 : {qna.hostqnaTitle}
+                            </div>
+                            <div className="info">
+                                <dl>
+                                    <dt>번호</dt>
+                                    <dd>{qna.hostqnaNo}</dd>
+                                </dl>
+                                <dl>
+                                    <dt>글쓴이</dt>
+                                    <dd>{qna.memNick}</dd>
+                                </dl>
+                                <dl>
+                                    <dt>작성일</dt>
+                                    <dd>{qna.hostqnaDate}</dd>
+                                </dl>                            
+                            </div>
+                            <div className="cont">
+                                <br/><br/>
+                                {qna.hostqnaInfo}
+                                <br/><br/><br/>
+                            </div>
+                            <div className="contcomment">
+                                <br/>
+                                <div className='commentmain'><p>관리자</p></div>
+                                <div className='commentinfo'>
+                                <p>{qna.hostqnaCom}</p>
+                                </div>
+                                <br/>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+    
+            </div>
+         );
+    }
+
+    else if(sessionNick !== memNick && comment === null){ // 수정x / 관리자답변x
+        return (
+            <div>
+    
+                <section className="board_wrap">
+                    <div className="board_title">
+                        <strong>QnA 상세게시판</strong>
+                    </div>
+                    <div className="board_view_wrap">
+                        <div className="board_view">
+                            <div className="title">
+                                제목 : {qna.hostqnaTitle}
+                            </div>
+                            <div className="info">
+                                <dl>
+                                    <dt>번호</dt>
+                                    <dd>{qna.hostqnaNo}</dd>
+                                </dl>
+                                <dl>
+                                    <dt>글쓴이</dt>
+                                    <dd>{qna.memNick}</dd>
+                                </dl>
+                                <dl>
+                                    <dt>작성일</dt>
+                                    <dd>{qna.hostqnaDate}</dd>
+                                </dl>                            
+                            </div>
+                            <div className="cont">
+                                <br/><br/>
+                                {qna.hostqnaInfo}
+                                <br/><br/><br/>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+    
+            </div>
+         );
+    }
+
+    else{ // 수정o / 관리자답변x
+        return (
             <div>
     
                 <section className="board_wrap">
@@ -114,46 +260,6 @@ function QnaDetailView(props) {
                         <div className="bt_wrap">
                             <button onClick={onUpdateItem}>수정</button>
                             <button onClick={onDeleteItem}>삭제</button>
-                        </div>
-                    </div>
-                </section>
-    
-            </div>
-         );
-     }
-
-     else{ //로그인된 닉네임과 작성자가 일치하지않을때 수정,삭제 못함
-        return (
-            <div>
-    
-                <section className="board_wrap">
-                    <div className="board_title">
-                        <strong>QnA 상세게시판</strong>
-                    </div>
-                    <div className="board_view_wrap">
-                        <div className="board_view">
-                            <div className="title">
-                                제목 : {qna.hostqnaTitle}
-                            </div>
-                            <div className="info">
-                                <dl>
-                                    <dt>번호</dt>
-                                    <dd>{qna.hostqnaNo}</dd>
-                                </dl>
-                                <dl>
-                                    <dt>글쓴이</dt>
-                                    <dd>{qna.memNick}</dd>
-                                </dl>
-                                <dl>
-                                    <dt>작성일</dt>
-                                    <dd>{qna.hostqnaDate}</dd>
-                                </dl>                            
-                            </div>
-                            <div className="cont">
-                                <br/><br/>
-                                {qna.hostqnaInfo}
-                                <br/><br/><br/>
-                            </div>
                         </div>
                     </div>
                 </section>
