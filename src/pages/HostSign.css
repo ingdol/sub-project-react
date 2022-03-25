@@ -29,6 +29,9 @@
     font-size: 16pt;
     font-weight: bold;
     transition: all 0.1s;
+    
+    padding: 0 5px;
+    border-radius: 5px;
 }
 
 .host-input:hover {
@@ -45,12 +48,14 @@
     position: relative;
     width: 300px;
     margin-bottom: 1.5rem;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 .host-submit {
     position: relative;
-    width: 350px;
-    height: 36px;
+    width: 314px;
+    height: 55px;
     border-radius: 10px;
     border: none;
     background-color: rgba(50, 130, 255, 0.9);
