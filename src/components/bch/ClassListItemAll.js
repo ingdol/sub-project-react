@@ -10,7 +10,7 @@ function ClassListItem(props) {
                 {
                     props.class.classPhoto === ''
                         ? <img src={"img/default.png"} />
-                        : <img src={props.class.classPhoto} />
+                        : <img src={"img/"+props.class.classPhoto} />
                 }
             </div>
             <span id='SpaceCard'>

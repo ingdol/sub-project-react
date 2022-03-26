@@ -9,7 +9,7 @@ function SpaceClassListItem(props) {
                 {
                     props.space.spacePhoto === ''
                         ? <img src={"img/default.png"} />
-                        : <img src={props.space.spacePhoto} />
+                        : <img src={"img/"+props.space.spacePhoto} />
                 }
             </div>
             <span id='SpaceCard'>
