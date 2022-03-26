@@ -57,6 +57,7 @@ function HostSign() {
     return (
         <div className='host-container'>
             <h1>LOGIN</h1>
+            <p>* Daily&Linker에서 가입한 Email로 로그인해주세요</p>
             <form className='host-form'>
                 <div className='use-input'>
                     <span className='inputTitle'>Email</span>

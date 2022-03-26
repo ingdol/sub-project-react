@@ -19,8 +19,8 @@ table { margin:0 auto;}
   .NextButtonspace{
     
   /* position: absolute; */
-  width: 70%;
-  height: 100px;
+  width: 60%;
+  height: 80px;
   color: white;
   background: #cf86ff;
   border-radius: 3px;
@@ -30,6 +30,7 @@ table { margin:0 auto;}
   -ms-transition:4s;
   -o-transition:.4s;
   transition:.4s;
+  font-size: 13px;
   }
   .NextButtonspace:hover:enabled{
   

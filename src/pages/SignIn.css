@@ -7,6 +7,13 @@
     top: 5rem;
 }
 
+.host-container p {
+    color: rgba(50, 130, 255, 0.9);
+    margin-top: 0;
+    padding-right: 45px;
+
+}
+
 .use-input {
     display: flex;
     position: absolute;

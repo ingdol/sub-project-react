@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from './Button';
 import './Main.css';
 import { Link } from 'react-router-dom';
@@ -13,16 +13,32 @@ function Main(props) {
     let [fna, fnaChange] = useState(hostQnA);
     let [modal, modalSet] = useState(false);
 
+    const [isLogin, setIsLogin] = useState(false)
+
+    useEffect(() => {
+        if (window.sessionStorage.getItem('sessionId') === null) {
+            console.log('isLogin ?? :: ', isLogin)
+        } else {
+            setIsLogin(true)
+            console.log('isLogin ?? :: ', isLogin)
+        }
+    })
+
     return (
         <div>
             <div className='background'>
                 <p>클래스 및 공간대여</p>
                 <p>누구나 지금 바로</p>
                 <p>
+                {isLogin ?
                     <Button buttonSize='btn--large'>
                         <Link to='/hostsign' className='btn-link' >
                             5분만에 호스트 지원하기</Link>
-                    </Button>
+                    </Button> : 
+                    <Button buttonSize='btn--large'>
+                    <Link to='/signin' className='btn-link' >
+                        5분만에 호스트 지원하기</Link>
+                </Button> }
                     
                 </p>
             </div>
@@ -46,10 +62,15 @@ function Main(props) {
                     })
                     }
                 </div>
-                <Button buttonSize='btn--large'>
+                {isLogin ?
+                    <Button buttonSize='btn--large'>
                         <Link to='/hostsign' className='btn-link' >
+                            5분만에 호스트 지원하기</Link>
+                    </Button> : 
+                    <Button buttonSize='btn--large'>
+                    <Link to='/signin' className='btn-link' >
                         5분만에 호스트 지원하기</Link>
-                </Button>
+                </Button> }
             </div>
             <div className='stepInfo'>
                 <p>호스트가 되는 과정</p>
@@ -84,10 +105,15 @@ function Main(props) {
                 <div className='endTitle'>
                     지금 바로 호스트에 지원하고 수익을 창출하세요.
                 </div>
-                <Button buttonSize='btn--large'>
-                    <Link to='/hostsign' className='btn-link' >
+                {isLogin ?
+                    <Button buttonSize='btn--large'>
+                        <Link to='/hostsign' className='btn-link' >
+                            5분만에 호스트 지원하기</Link>
+                    </Button> : 
+                    <Button buttonSize='btn--large'>
+                    <Link to='/signin' className='btn-link' >
                         5분만에 호스트 지원하기</Link>
-                </Button>
+                </Button> }
             </div>
         </div>
     );
