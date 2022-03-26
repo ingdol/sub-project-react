@@ -44,3 +44,7 @@
     outline: 0;
     cursor: pointer;
 }
+
+.none {
+    color: rgb(93, 165, 248);
+}

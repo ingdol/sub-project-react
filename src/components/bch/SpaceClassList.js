@@ -41,25 +41,30 @@ function SpaceClassList(props) {
             });
             setTimeout( () => {
                 loadData()
-            }, 100);
+            }, 50);
         // loadData();
     }, []);
     return (
         <div>
             <h2>내 공간</h2>
             {
-                data.map(function (space, i) {
+                Object.keys(data2).length === 0
+                ? <h1 class="none">등록된 공간이 없습니다.</h1>
+                : data.map(function (space, i) {
                     return <SpaceListItem space={space} key={i} />
                 })
             }
             <hr id='SpaceClassLine' />
             <h2>내 클래스</h2>
             {
-                data2.map(function (class2, i) {
+                Object.keys(data2).length === 0
+                ? <h1 class="none">등록된 클래스가 없습니다.</h1>
+                : data2.map(function (class2, i) {
                     return <ClassListItem class={class2} key={i} />
                 })
+                
             }
-            <hr />
+
         </div>
     );
 }
