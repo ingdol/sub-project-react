@@ -178,8 +178,8 @@ function LogoutNav(props) {
                 </li>
 
                 <li className='nav-item'>
-                    <Link to='/hostsign' className='nav-links' onClick={props.closeMobileMenu}>
-                        호스트 신청
+                    <Link to='/signin' className='nav-links' onClick={props.closeMobileMenu}>
+                    호스트 신청
                     </Link>
                 </li>
                 <li className='nav-btn'>

@@ -3,8 +3,12 @@ import { Link, Routes, Route } from 'react-router-dom';
 import './Class2.css';
 import './box.css'
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 function Inbox(props) {
+    
+    let history = useNavigate();
+
     // state
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -47,19 +51,19 @@ function Inbox(props) {
     const oncheck = (e) => {
         if (data === 0) {
             alert("호스트 권한이 필요합니다.");
-            window.location.replace("/hostsign");
+            history("/hostsign");
         }
         else {
-            window.location.replace("/CreateClass");
+            history("/CreateClass");
         }
     }
     const oncheck2 = (e) => {
         if (data === 0) {
             alert("호스트 권한이 필요합니다.");
-            window.location.replace("/hostsign");
+            history("/hostsign");
         }
         else {
-            window.location.replace("/CreateSpace");
+            history("/CreateSpace");
         }
     }
 

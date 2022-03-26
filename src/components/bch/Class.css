@@ -34,6 +34,7 @@ inbox {
     position: relative;
     width: 350px;
     height: 250px;
+    padding-bottom: 20px;
     
     background: #FFFFFF;
     border: 3px solid #000000;
@@ -76,6 +77,8 @@ inbox {
     border-radius: 5px;
     line-height:150%;
     padding:20px;
+    margin-left: 40px;
+    margin-top: 15px;
   }
   .checkboxa2{
     text-align: center;
@@ -83,7 +86,10 @@ inbox {
     border: 0px solid #000000;
     width:1000px;
   }
-
+  .checkText {
+    margin-left: 40px;
+    font-size: 18px;
+  }
   
 .subbox{
   position:relative;
@@ -110,8 +116,8 @@ inbox {
   }
   
   .subbox:hover{
-    background: #ff4a4a;
-    border: 3px solid #ff4a4a;
+    background: #f16868;
+    border: 3px solid #f16868;
     border-radius: 10px;
   }
   .select::-ms-expand{
@@ -132,8 +138,8 @@ inbox {
   .NextButton{
     
   /* position: absolute; */
-  width: 70%;
-  height: 100px;
+  width: 60%;
+  height: 80px;
   color: white;
   background: #FF8686;
   border-radius: 3px;
@@ -144,10 +150,11 @@ inbox {
   -o-transition:.4s;
   transition:.4s;
   top:53px;
+  font-size: 13px;
   }
   .NextButton:hover:enabled{
   
-    background: #ff4a4a;
+    background: #f16868;
   
     }
   .toggle3 input[type=radio]{

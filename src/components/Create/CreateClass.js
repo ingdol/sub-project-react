@@ -51,7 +51,7 @@ function CreateClass(props) {
 
             <table border="0" className="checkboxa2">
                 <tr align="left"><h3><img src="img/write.png" width="50px" height="50px" />약관에 동의해주세요.</h3><hr width="100%" align="left" /><br /></tr>
-                <tr align="left"><b>이용약관 동의 <span className="span2">(필수)</span></b>
+                <tr align="left"><b className='checkText'>이용약관 동의 <span className="span2">(필수)</span></b>
                     <div className="checkboxa">
 
                         제1조(목적)<br /><br /> 이 약관은 코딩라이트 팀(전자상거래 사업자)가 운영하는 Daily & Linker(이하 "데"라 한다)에서 제공하는 인터넷 관련 서비스(이하 “서비스”라 한다)를 이용함에 있어 사이버 몰과 이용자의 권리․의무 및 책임사항을 규정함을 목적으로 합니다.
@@ -307,7 +307,7 @@ function CreateClass(props) {
                         <label for="check1">상기 본인은 이상의 약관에 동의합니다</label>
                     </div></tr>
 
-                <tr align="left"><br /><br /><b>개인정보 수집 및 이용 동의 <span className="span2">(필수)</span></b>
+                <tr align="left"><br /><br /><b className='checkText'>개인정보 수집 및 이용 동의 <span className="span2">(필수)</span></b>
                     <div className="checkboxa">
 
                         개인정보처리방침<br /><br />
@@ -459,7 +459,7 @@ function CreateClass(props) {
                 <tr><br /><br /><br /><h3><input type="checkbox" id="all-check" checked={allCheck} onChange={allBtnEvent} />
                     <label for="all-check">모든 약관에 동의합니다</label></h3></tr>
 
-                <tr><br /><br /><hr width="70%" /><br /><br /></tr>
+                <tr><br /><br /><hr width="90%" /><br /><br /></tr>
                 <tr><div>{
                     allCheck === true
                         ? <button className="NextButton" onClick={click}><h1>다음</h1></button>
