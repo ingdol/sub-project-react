@@ -48,7 +48,7 @@ function SpaceClassList(props) {
         <div>
             <h2>내 공간</h2>
             {
-                Object.keys(data2).length === 0
+                Object.keys(data).length === 0
                 ? <h1 class="none">등록된 공간이 없습니다.</h1>
                 : data.map(function (space, i) {
                     return <SpaceListItem space={space} key={i} />

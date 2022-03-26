@@ -17,6 +17,7 @@ import Login from './components/Login/Login';
 import LoginTest from './components/Login/LoginTest';
 import Bottom from './components/main/Bottom';
 import UpdateClass from './components/bch/UpdateClass';
+import UpdateSpace from './components/bch/UpdateSpace';
 import { Route, Routes, BrowserRouter, Router } from 'react-router-dom';
 import './App.css';
 import HostSign from './pages/HostSign';
@@ -51,6 +52,7 @@ function App() {
         <Route path="/qnadetailview/:hostqnaNo/:memNick" element={<QnaDetailView></QnaDetailView>} />
         <Route path="/qnaupdate/:hostqnaNo" element={<QnaUpdate></QnaUpdate>} />
         <Route path="/UpdateClass/:classNo" element={<UpdateClass />} />
+        <Route path="/UpdateSpace/:spaceNo" element={<UpdateSpace />} />
       </Routes>
 
       <Routes>
