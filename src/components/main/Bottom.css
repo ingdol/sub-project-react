@@ -1,6 +1,6 @@
 .footerBox {
     margin-top: 100px;
-    padding: 5% 15%;
+    padding: 5% 20%;
     background: rgb(248, 248, 248);
     text-align: left;
 }
@@ -8,6 +8,7 @@
 .bottomMenuBox1 {
     font-size: 30px;
     font-weight: 700;
+    padding-left: 20px;
 }
 
 .footerTable1, .footerTable2 {
@@ -17,25 +18,15 @@
 
 .footerTitle1, .footerTitle2 {
     font-size: 20px;
-    padding: 20px 0;
     font-weight: 600;
 }
 
 .footerText1 {
-    padding: 5px 0;
     width: 80px;
 }
 
-.footerHr {
-    margin: 2% 0;
-}
-
-.footerText2 {
-    padding: 6px 0;
-}
-
 .bottomMenuBox2 {
-    padding-top: 20px;
-    font-size: 16px;
+    font-size: 18px;
+    padding-left: 20px;
     font-weight: 600;
 }
