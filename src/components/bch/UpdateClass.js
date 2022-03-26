@@ -2,6 +2,16 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './Class.css';
+import logo from './img/1.jpg';
+import logo2 from './img/2.jpg';
+import logo3 from './img/3.jpg';
+import logo4 from './img/4.jpg';
+import logo5 from './img/5.jpg';
+import logo6 from './img/6.jpg';
+import logo7 from './img/7.jpg';
+import logo8 from './img/8.jpg';
+import logo9 from './img/9.jpg';
+import classs from './img/class.png';
 
 function UpdateClass(props) {
     // (1) Part1 : classNo 해당되는 상품 정보 받아오기 
@@ -93,7 +103,7 @@ function UpdateClass(props) {
                 <input type="hidden" value={Class.classNo} Name="classNo" onChange={onChange} />
                 <table border="0" className="checkboxa2" >
                     <div className="CreateClass">
-                        <tr><td colspan="2"><h3><img src="img/class.png" width="50px" height="50px" /><b> 클래스 개설</b></h3></td>
+                        <tr><td colspan="2"><h3><img src={classs} width="50px" height="50px" /><b> 클래스 정보 수정</b></h3></td>
 
                         </tr>
                         <tr><td colspan="2"><hr width="900px" /></td></tr>
@@ -124,23 +134,23 @@ function UpdateClass(props) {
                         <tr><td colspan="2"><br /><br /><br /><hr width="900px" /></td></tr>
                         <tr><td><h4>클래스의 카테고리를 선택해주세요.</h4></td></tr>
                         <tr><td><input type="radio" id="toggle3-1" className="toggle3-1" name="hobbyNo" value="1" onChange={onChange} />
-                            <label for="toggle3-1" ><img src="img/1.jpg" width="100px" height="100px" /></label>
+                            <label for="toggle3-1" ><img src={logo} width="100px" height="100px" /></label>
                             <input type="radio" id="toggle3-2" className="toggle3-2" name="hobbyNo" value="2" onChange={onChange} />
-                            <label for="toggle3-2"><img src="img/2.jpg" width="100px" height="100px" /></label>
+                            <label for="toggle3-2"><img src={logo2} width="100px" height="100px" /></label>
                             <input type="radio" id="toggle3-3" className="toggle3-3" name="hobbyNo" value="3" onChange={onChange} />
-                            <label for="toggle3-3"><img src="img/3.jpg" width="100px" height="100px" /></label>
+                            <label for="toggle3-3"><img src={logo3} width="100px" height="100px" /></label>
                             <input type="radio" id="toggle3-4" className="toggle3-4" name="hobbyNo" value="4" onChange={onChange} />
-                            <label for="toggle3-4"><img src="img/4.jpg" width="100px" height="100px" /></label><br />
+                            <label for="toggle3-4"><img src={logo4} width="100px" height="100px" /></label><br />
                             <input type="radio" id="toggle3-5" className="toggle3-5" name="hobbyNo" value="5" onChange={onChange} />
-                            <label for="toggle3-5"><img src="img/5.jpg" width="100px" height="100px" /></label>
+                            <label for="toggle3-5"><img src={logo5} width="100px" height="100px" /></label>
                             <input type="radio" id="toggle3-6" className="toggle3-6" name="hobbyNo" value="6" onChange={onChange} />
-                            <label for="toggle3-6"><img src="img/6.jpg" width="100px" height="100px" /></label>
+                            <label for="toggle3-6"><img src={logo6} width="100px" height="100px" /></label>
                             <input type="radio" id="toggle3-7" className="toggle3-7" name="hobbyNo" value="7" onChange={onChange} />
-                            <label for="toggle3-7"><img src="img/7.jpg" width="100px" height="100px" /></label>
+                            <label for="toggle3-7"><img src={logo7} width="100px" height="100px" /></label>
                             <input type="radio" id="toggle3-8" className="toggle3-8" name="hobbyNo" value="8" onChange={onChange} />
-                            <label for="toggle3-8"><img src="img/8.jpg" width="100px" height="100px" /></label>
+                            <label for="toggle3-8"><img src={logo8} width="100px" height="100px" /></label>
                             <input type="radio" id="toggle3-9" className="toggle3-9" name="hobbyNo" value="9" onChange={onChange} />
-                            <label for="toggle3-9"><img src="img/9.jpg" width="100px" height="100px" /></label></td></tr>
+                            <label for="toggle3-9"><img src={logo9} width="100px" height="100px" /></label></td></tr>
                         <tr><td colspan="2"><br /><br /><hr width="900px" /></td></tr>
                         <tr><td colspan="2"><h4>자신의 클래스를 소개해보세요.</h4></td></tr>
                         <tr><td colspan="2"><input type="text" name="classTitle" className="classTitle" placeholder="소개글의 제목을 입력해주세요."

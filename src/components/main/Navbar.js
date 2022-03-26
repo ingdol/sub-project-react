@@ -5,9 +5,10 @@ import { Button } from './Button';
 import './Navbar.css';
 import { IconContext } from 'react-icons/lib';
 import { useNavigate } from 'react-router-dom';
+import daily from './img/logo.jpg'
 
 function Navbar(props) {
-    
+
     let history = useNavigate();
     /* 클릭하기 전 false = bar모양 */
     const [click, setClick] = useState(false);
@@ -33,16 +34,16 @@ function Navbar(props) {
     const [isLogin, setIsLogin] = useState(false)
 
     useEffect(() => {
-        if(window.sessionStorage.getItem('sessionId') === null){
-        console.log('isLogin ?? :: ', isLogin)
+        if (window.sessionStorage.getItem('sessionId') === null) {
+            console.log('isLogin ?? :: ', isLogin)
         } else {
-        setIsLogin(true)
-        console.log('isLogin ?? :: ', isLogin)
+            setIsLogin(true)
+            console.log('isLogin ?? :: ', isLogin)
         }
     })
 
     const onLogout = () => {
-    	// sessionStorage 에 user_id 로 저장되어있는 아이템을 삭제한다.
+        // sessionStorage 에 user_id 로 저장되어있는 아이템을 삭제한다.
         window.sessionStorage.removeItem('sessionId')
         window.sessionStorage.removeItem('sessionNick')
         setIsLogin(false)
@@ -51,97 +52,97 @@ function Navbar(props) {
 
     return (
         <div className='NavBar'>
-        <IconContext.Provider value={{ color: '#40A6FB' }}>
-            <div className="navbar">
-                    
+            <IconContext.Provider value={{ color: '#40A6FB' }}>
+                <div className="navbar">
+
                     {/* 메뉴바 */}
                     <div className="menu-icon" onClick={handleClick}>
                         {/* 메뉴바 클릭하면 true일때 x 모양, false일때 bar 모양 */}
-                        { click ? <FaTimes /> : <FaBars /> }
+                        {click ? <FaTimes /> : <FaBars />}
                     </div>
-                    
-                    {isLogin ? 
-                    <div className="navbar-container container">
-                    <Link to='/' className='navbar-log' onClick={props.closeMobileMenu}>
-                        <div className="logoImgDiv">
-                            <img className="logoImg" src="img/logo.jpg" />
-                        </div>
-                    </Link>
-                        {/* 메뉴리스트 */}
-                        <ul className={props.click ? 'nav-menu active' : 'nav-menu'}>
-                            <li className='nav-item'>
-                                <Link to='/Intro' className='nav-links' onClick={closeMobileMenu}>
-                                    CREATE
-                                </Link>
-                            </li>
-                            <li className='nav-item'>
-                                <Link to='/SpaceClassList' className='nav-links' onClick={closeMobileMenu}>
-                                    MY
-                                </Link>
-                            </li>
-                            <li className='nav-item'>
-                                <Link to='/QnaList' className='nav-links' onClick={closeMobileMenu}>
-                                    Q&A
-                                </Link>
-                            </li>
-                            <li className='nav-btn'>
-                                {/* {button ? ( */}
-                                        <Button buttonStyle='btn--outline'
+
+                    {isLogin ?
+                        <div className="navbar-container container">
+                            <Link to='/' className='navbar-log' onClick={props.closeMobileMenu}>
+                                <div className="logoImgDiv">
+                                    <img className="logoImg" src={daily} />
+                                </div>
+                            </Link>
+                            {/* 메뉴리스트 */}
+                            <ul className={props.click ? 'nav-menu active' : 'nav-menu'}>
+                                <li className='nav-item'>
+                                    <Link to='/Intro' className='nav-links' onClick={closeMobileMenu}>
+                                        CREATE
+                                    </Link>
+                                </li>
+                                <li className='nav-item'>
+                                    <Link to='/SpaceClassList' className='nav-links' onClick={closeMobileMenu}>
+                                        MY
+                                    </Link>
+                                </li>
+                                <li className='nav-item'>
+                                    <Link to='/QnaList' className='nav-links' onClick={closeMobileMenu}>
+                                        Q&A
+                                    </Link>
+                                </li>
+                                <li className='nav-btn'>
+                                    {/* {button ? ( */}
+                                    <Button buttonStyle='btn--outline'
                                         type='button'
                                         onClick={onLogout}>LOGOUT</Button>
-                                    
-                                { /* ) : (
+
+                                    { /* ) : (
                                     <Link to='/sign-up' className='btn-link' >
                                         <Button buttonStyle='btn--outline'
                                             buttonSize='btn--mobile'
                                             onClick={closeMobileMenu}>SIGN UP</Button>
                                     </Link>
                                 )} */}
-    
-                            </li>
-                        </ul>
-                    </div>: 
-                    <LogoutNav></LogoutNav>
+
+                                </li>
+                            </ul>
+                        </div> :
+                        <LogoutNav></LogoutNav>
                     }
-            </div>
-        </IconContext.Provider>
+                </div>
+            </IconContext.Provider>
         </div>
-        
+
     );
 }
 
 function LoginNav(props) {
-    return(
+    return (
         <div className="navbar-container container">
-                <Link to='/' className='navbar-log' onClick={props.closeMobileMenu}>
-                    <div className="logoImgDiv">
-                        <img className="logoImg" src="img/logo.jpg" />
-                    </div>
-                </Link>
-                    {/* 메뉴리스트 */}
-                    <ul className={props.click ? 'nav-menu active' : 'nav-menu'}>
-                        <li className='nav-item'>
-                            <Link to='/Intro' className='nav-links' onClick={props.closeMobileMenu}>
-                                CREATE
-                            </Link>
-                        </li>
-                        <li className='nav-item'>
-                            <Link to='/SpaceClassList' className='nav-links' onClick={props.closeMobileMenu}>
-                                MY
-                            </Link>
-                        </li>
-                        <li className='nav-item'>
-                            <Link to='/QnaList' className='nav-links' onClick={props.closeMobileMenu}>
-                                Q&A
-                            </Link>
-                        </li>
-                        <li className='nav-btn'>
-                            {/* {button ? ( */}
-                                    <Button buttonStyle='btn--outline'
-                                    type='button'
-                                    onClick={props.onLogout}>LOGOUT</Button>
-                                
-                            { /* ) : (
+            <Link to='/' className='navbar-log' onClick={props.closeMobileMenu}>
+                <div className="logoImgDiv">
+                    <img className="logoImg" src={daily} />
+                </div>
+            </Link>
+            {/* 메뉴리스트 */}
+            <ul className={props.click ? 'nav-menu active' : 'nav-menu'}>
+                <li className='nav-item'>
+                    <Link to='/Intro' className='nav-links' onClick={props.closeMobileMenu}>
+                        CREATE
+                    </Link>
+                </li>
+                <li className='nav-item'>
+                    <Link to='/SpaceClassList' className='nav-links' onClick={props.closeMobileMenu}>
+                        MY
+                    </Link>
+                </li>
+                <li className='nav-item'>
+                    <Link to='/QnaList' className='nav-links' onClick={props.closeMobileMenu}>
+                        Q&A
+                    </Link>
+                </li>
+                <li className='nav-btn'>
+                    {/* {button ? ( */}
+                    <Button buttonStyle='btn--outline'
+                        type='button'
+                        onClick={props.onLogout}>LOGOUT</Button>
+
+                    { /* ) : (
                                 <Link to='/sign-up' className='btn-link' >
                                     <Button buttonStyle='btn--outline'
                                         buttonSize='btn--mobile'
@@ -149,45 +150,45 @@ function LoginNav(props) {
                                 </Link>
                             )} */}
 
-                        </li>
-                    </ul>
-                </div>
+                </li>
+            </ul>
+        </div>
     );
 }
 
 function LogoutNav(props) {
-    return(
+    return (
         <div className="navbar-container container">
-                <Link to='/' className='navbar-log' onClick={props.closeMobileMenu}>
-                    <div className="logoImgDiv">
-                        <img className="logoImg" src="img/logo.jpg" />
-                    </div>
-                </Link>
-                    {/* 메뉴리스트 */}
-                    <ul className={props.click ? 'nav-menu active' : 'nav-menu'}>
-                        <li className='nav-item'>
-                            <Link to='/SpaceClassListAll' className='nav-links' onClick={props.closeMobileMenu}>
-                                ALL
-                            </Link>
-                        </li>
-                        <li className='nav-item'>
-                            <Link to='/QnaList' className='nav-links' onClick={props.closeMobileMenu}>
-                                Q&A
-                            </Link>
-                        </li>
-                        
-                        <li className='nav-item'>
-                            <Link to='/hostsign' className='nav-links' onClick={props.closeMobileMenu}>
-                                호스트 신청
-                            </Link>
-                        </li>
-                        <li className='nav-btn'>
-                            {/* {button ? ( */}
-                                <Link to='/signin' className='btn-link' >
-                                    <Button buttonStyle='btn--outline'
-                                    onClick={props.closeMobileMenu}>LOGIN</Button>
-                                </Link>
-                            { /* ) : (
+            <Link to='/' className='navbar-log' onClick={props.closeMobileMenu}>
+                <div className="logoImgDiv">
+                    <img className="logoImg" src={daily} />
+                </div>
+            </Link>
+            {/* 메뉴리스트 */}
+            <ul className={props.click ? 'nav-menu active' : 'nav-menu'}>
+                <li className='nav-item'>
+                    <Link to='/SpaceClassListAll' className='nav-links' onClick={props.closeMobileMenu}>
+                        ALL
+                    </Link>
+                </li>
+                <li className='nav-item'>
+                    <Link to='/QnaList' className='nav-links' onClick={props.closeMobileMenu}>
+                        Q&A
+                    </Link>
+                </li>
+
+                <li className='nav-item'>
+                    <Link to='/hostsign' className='nav-links' onClick={props.closeMobileMenu}>
+                        호스트 신청
+                    </Link>
+                </li>
+                <li className='nav-btn'>
+                    {/* {button ? ( */}
+                    <Link to='/signin' className='btn-link' >
+                        <Button buttonStyle='btn--outline'
+                            onClick={props.closeMobileMenu}>LOGIN</Button>
+                    </Link>
+                    { /* ) : (
                                 <Link to='/sign-up' className='btn-link' >
                                     <Button buttonStyle='btn--outline'
                                         buttonSize='btn--mobile'
@@ -195,9 +196,9 @@ function LogoutNav(props) {
                                 </Link>
                             )} */}
 
-                        </li>
-                    </ul>
-                </div>
+                </li>
+            </ul>
+        </div>
     );
 }
 
