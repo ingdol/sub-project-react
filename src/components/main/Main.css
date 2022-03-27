@@ -92,13 +92,13 @@
 }
 
 .hostItem p:nth-child(1) {
-    font-size: 50px;
+    font-size: 60px;
     font-weight: 700;
     color: #40A6FB;
     margin-bottom: 0;
 }
 .hostItem p:nth-child(2) {
-    font-size: 22px;
+    font-size: 25px;
     font-weight: 700;
     color: #2e2e2e;
 }
@@ -106,6 +106,7 @@
     color: #4e4e4e;
     font-weight: 500;
     line-height: 1.5;
+    font-size: 20px;
 }
 .stepInfo {
     background-color: rgb(243, 250, 255);
