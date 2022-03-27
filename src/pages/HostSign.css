@@ -1,0 +1,122 @@
+.host-container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 500px;
+    /* top: 10rem; */
+}
+
+.use-input {
+    display: flex;
+    position: absolute;
+    top: 0rem;
+    flex-direction: column;
+    text-align: right;
+}
+
+.host-form {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+.host-input {
+    position: relative;
+    width: 300px;
+    height: 30px;
+    margin-bottom: 2.5rem;
+    font-size: 16pt;
+    font-weight: bold;
+    transition: all 0.1s;
+    
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
+.host-input:hover {
+    border: 2px solid rgba(50, 130, 255, 0.9);
+    background: rgba(204, 204, 204, 0.5);
+}
+
+.host-input:focus {
+    border: 2px solid transparent;
+    outline: 2px solid rgba(204, 204, 204, 1);
+}
+
+.host-info {
+    position: relative;
+    width: 300px;
+    margin-bottom: 1.5rem;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.host-submit {
+    position: relative;
+    width: 314px;
+    height: 55px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(50, 130, 255, 0.9);
+    font-size: medium;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.host-submit:hover {
+    background-color: rgba(50, 130, 255, 1);
+}
+
+.text-place::placeholder {
+    font-size: 11pt;
+}
+
+textarea {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    resize: none;
+    transition: all 0.1s;
+}
+
+textarea::placeholder {
+    font-size: 11pt;
+}
+
+textarea:hover {
+    border: 1px solid transparent;
+    outline: 1px solid rgba(50, 130, 255, 0.9);
+    background: rgba(204, 204, 204, 0.5);
+}
+
+textarea:focus {
+    border: 1px solid transparent;
+    outline: 2px solid rgba(204, 204, 204, 1);
+}
+
+.inputTitle {
+    margin-bottom: 3.4rem;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.warningName {
+    position: absolute;
+    bottom: 26.5rem;
+    left: 6rem;
+    color: red;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.warningNum {
+    position: absolute;
+    bottom: 21.7rem;
+    left: 6rem;
+    color: red;
+    font-size: medium;
+    font-weight: bold;
+}

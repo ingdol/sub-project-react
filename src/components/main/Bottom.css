@@ -1,0 +1,32 @@
+.footerBox {
+    margin-top: 100px;
+    padding: 5% 20%;
+    background: rgb(248, 248, 248);
+    text-align: left;
+}
+
+.bottomMenuBox1 {
+    font-size: 30px;
+    font-weight: 700;
+    padding-left: 20px;
+}
+
+.footerTable1, .footerTable2 {
+    text-align: left;
+    width: 100%;
+}
+
+.footerTitle1, .footerTitle2 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.footerText1 {
+    width: 80px;
+}
+
+.bottomMenuBox2 {
+    font-size: 18px;
+    padding-left: 20px;
+    font-weight: 600;
+}

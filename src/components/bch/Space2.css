@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+
+a { text-decoration : none;}
+
+table { margin:0 auto;}
+
+.CreateSpace {
+  text-align: left;
+  position: relative;
+  width: 1000px;
+
+  
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding:25px 25px 50px 25px;
+}
+  .NextButtonspace{
+    
+  /* position: absolute; */
+  width: 70%;
+  height: 100px;
+  color: white;
+  background: #cf86ff;
+  border-radius: 3px;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+  -webkit-transition:.4s;
+  -moz-transition:.4s;
+  -ms-transition:4s;
+  -o-transition:.4s;
+  transition:.4s;
+  }
+  .NextButtonspace:hover:enabled{
+  
+    background: #ae00ff;
+  
+    }
+.spaceArea{
+      position: absolute;
+    width: 200px;
+    height: 40px;
+    
+    background: #FFFFFF;
+    border: 2px solid #f081ff;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding:6px;
+}
+
+.spaceCtgNo{
+  position: absolute;
+  width: 200px;
+  height: 40px;
+  
+  background: #FFFFFF;
+  border: 2px solid #f081ff;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding:6px;
+}
+
+.spaceCtgNo option{
+	size:5px;
+	background: white;
+	color: black;
+	padding: 3px 0;
+}
+
+.spaceTitle{
+  width:500px; 
+  height:40px; 
+  text-align:center; 
+  background: #FFFFFF; 
+  border: 1px solid rgba(225, 0, 255, 0.5);
+  box-sizing: border-box; 
+  box-shadow: 0px 3px 3px rgba(225, 0, 255, 0.5);
+  border-radius: 3px;
+}
+.spaceInfo{
+  background: #FFFFFF; 
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  box-sizing: border-box; 
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+  border-radius: 10px; padding:10px;
+  padding: 20px;
+}
+
+
+.subbox2{
+  position:relative;
+    
+  width: 100%;
+  height: 70px;
+  text-align: center;
+  
+  background: #e97aff;
+  border: 3px solid #e97aff;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-size:250%;
+  font-family: 'Dongle', sans-serif;;
+  
+  color: white;
+          -webkit-transition:.4s;
+    -moz-transition:.4s;
+    -ms-transition:4s;
+    -o-transition:.4s;
+    transition:.4s;
+    top:53px;
+  }
+  
+  .subbox2:hover{
+    background: #d400ff;
+    border: 3px solid #d400ff;
+    border-radius: 10px;
+  }
+
+  .spacePrice1{
+    width:200px; 
+    height:40px; 
+    text-align:center; 
+    background: #FFFFFF; 
+    border: 2px solid rgba(173, 0, 255, 0.25);
+    box-sizing: border-box; 
+  /* 	box-shadow: 0px 4px 4px rgba(173, 0, 255, 0.25);  */
+    border-radius: 4px;
+  }
+  
+  .spacePrice2{
+    width:200px; 
+    height:40px; 
+    text-align:center; 
+    background: #FFFFFF; 
+    border: 2px solid rgba(173, 0, 255, 0.25);
+    box-sizing: border-box; 
+  /* 	box-shadow: 0px 4px 4px rgba(173, 0, 255, 0.25);  */
+    border-radius: 4px;
+  }
+  
+  .spacePerNum{
+    width:200px; 
+    height:40px; 
+    text-align:center; 
+    background: #FFFFFF; 
+    border: 2px solid rgba(173, 0, 255, 0.25);
+    box-sizing: border-box; 
+  /* 	box-shadow: 0px 4px 4px rgba(173, 0, 255, 0.25);  */
+    border-radius: 4px;
+  }
+  .spacePerMax{
+    width:200px; 
+    height:40px; 
+    text-align:center; 
+    background: #FFFFFF; 
+    border: 2px solid rgba(173, 0, 255, 0.25);
+    box-sizing: border-box; 
+  /* 	box-shadow: 0px 4px 4px rgba(173, 0, 255, 0.25);  */
+    border-radius: 4px;
+  }
+.memAddress1{
+  width:400px; 
+	height:40px; 
+	text-align:center; 
+	background: #FFFFFF; 
+	border: 1px solid rgba(173, 0, 255, 0.25);
+	box-sizing: border-box; 
+	box-shadow: 0px 3px 3px rgba(173, 0, 255, 0.25); 
+	border-radius: 3px;
+}
+
+  .Addressbutton{
+ 
+    display: inline-block;
+    padding: 10px 10px;
+    color: #fff;
+    vertical-align: middle;
+    background-color:#d17dff;
+    border: 1px solid #d17dff;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 40px;
+    margin-left: 10px;
+    -webkit-transition:.4s;
+  -moz-transition:.4s;
+  -ms-transition:4s;
+  -o-transition:.4s;
+  transition:.4s;
+}
+.Addressbutton:hover{
+
+    background-color:#8000ff;
+	border: 1px solid #8000ff;
+}
+.postCode_btn{
+  position:absolute;
+  top:22%;
+  left:87%;
+	border:0px;
+  background-color: rgba(255, 255, 255, 0);
+  
+  /* display: inline-block;
+    /* padding: 5px 5px; */
+    /* color: #fff;
+    vertical-align: middle;
+    background-color:#d17dff;
+    border: 1px solid #d17dff;
+    border-radius: 10px;
+    cursor: pointer;
+    width:70px;
+    height: 30px;
+    margin-left: 10px; */
+}
+/* .postCode_btn:hover{
+  background-color:#8000ff;
+	border: 1px solid #8000ff;
+} */
+
+.pop{
+  color:gray;
+  font-size: 12px;
+}
+
